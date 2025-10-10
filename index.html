@@ -89,7 +89,7 @@
       padding: 16px 0;
     }
     
-    /* Logo Styling */
+    /* Logo Styling - Green Theme */
     .logo {
       display: flex;
       align-items: center;
@@ -106,14 +106,14 @@
       background: var(--card);
       color: var(--text);
       padding: 8px 14px;
-      border: 2px solid var(--text);
+      border: 2px solid var(--accent);
     }
     
     .logo-skincare {
-      background: var(--text);
+      background: var(--accent);
       color: var(--card);
       padding: 8px 14px;
-      border: 2px solid var(--text);
+      border: 2px solid var(--accent);
       border-left: none;
     }
     
@@ -486,18 +486,28 @@
         padding: 0 20px;
       }
       
-      /* Mobile Navigation */
+      /* Mobile Navigation - Logo Centered */
       .nav-wrap {
         padding: 14px 0;
+        position: relative;
       }
       
       .logo {
         font-size: 14px;
+        margin: 0 auto;
       }
       
       .logo-brave,
       .logo-skincare {
         padding: 6px 10px;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
       }
       
       .nav-links {
@@ -516,10 +526,6 @@
       
       .nav-links.active {
         display: flex;
-      }
-      
-      .mobile-menu-btn {
-        display: block;
       }
       
       /* Mobile Hero */
