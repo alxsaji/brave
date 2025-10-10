@@ -16,7 +16,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
   
   <style>
     :root {
@@ -86,14 +86,35 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 20px 0;
+      padding: 16px 0;
     }
     
+    /* Logo Styling */
     .logo {
-      font-size: 21px;
-      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    
+    .logo-brave {
+      background: var(--card);
       color: var(--text);
-      letter-spacing: -0.02em;
+      padding: 8px 14px;
+      border: 2px solid var(--text);
+    }
+    
+    .logo-skincare {
+      background: var(--text);
+      color: var(--card);
+      padding: 8px 14px;
+      border: 2px solid var(--text);
+      border-left: none;
     }
     
     .nav-links {
@@ -110,6 +131,24 @@
     
     .nav-links a:hover {
       color: var(--text);
+    }
+    
+    /* Mobile Menu Toggle */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    
+    .mobile-menu-btn span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      margin: 5px 0;
+      transition: 0.3s;
     }
     
     /* Hero */
@@ -441,41 +480,188 @@
       transform: translateY(0);
     }
     
-    /* Mobile */
+    /* Mobile Optimizations */
     @media (max-width: 880px) {
-      .hero-grid,
-      .grid-3,
-      .grid-2 {
-        grid-template-columns: 1fr;
+      .wrap {
+        padding: 0 20px;
       }
       
-      h1 {
-        font-size: 40px;
+      /* Mobile Navigation */
+      .nav-wrap {
+        padding: 14px 0;
       }
       
-      h2 {
-        font-size: 32px;
+      .logo {
+        font-size: 14px;
       }
       
-      .hero {
-        padding: 60px 0;
-      }
-      
-      section {
-        padding: 64px 0;
+      .logo-brave,
+      .logo-skincare {
+        padding: 6px 10px;
       }
       
       .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--card);
+        border-bottom: 1px solid var(--line);
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        box-shadow: 0 8px 16px var(--shadow);
       }
       
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      /* Mobile Hero */
+      .hero {
+        padding: 48px 0 60px;
+      }
+      
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      
+      h1 {
+        font-size: 36px;
+        line-height: 1.1;
+      }
+      
+      .sub {
+        font-size: 17px;
+        margin-bottom: 24px;
+      }
+      
+      .badge-row {
+        gap: 8px;
+        margin: 20px 0 28px;
+      }
+      
+      .badge {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+      
+      .cta-row {
+        flex-direction: column;
+        gap: 12px;
+      }
+      
+      .btn,
+      .btn-ghost {
+        width: 100%;
+        text-align: center;
+        padding: 14px 24px;
+        font-size: 15px;
+      }
+      
+      .hero-image img {
+        height: 380px;
+      }
+      
+      /* Mobile Sections */
+      section {
+        padding: 60px 0;
+      }
+      
+      h2 {
+        font-size: 28px;
+        line-height: 1.2;
+      }
+      
+      .lead {
+        font-size: 17px;
+        margin-bottom: 40px;
+      }
+      
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .card {
+        padding: 24px;
+      }
+      
+      .card h3 {
+        font-size: 20px;
+      }
+      
+      .card-image {
+        height: 220px;
+      }
+      
+      .feature-image {
+        margin: 32px 0;
+        border-radius: 16px;
+      }
+      
+      .feature-image img {
+        height: 300px;
+      }
+      
+      /* Mobile Bundle */
       .bundle-section {
-        padding: 48px 28px;
+        padding: 48px 24px;
+        border-radius: 24px;
+        margin: 40px 0;
+      }
+      
+      .stat {
+        font-size: 36px;
+      }
+      
+      .price {
+        font-size: 24px;
+      }
+      
+      /* Mobile FAQ */
+      .faq-item {
+        padding: 20px;
+      }
+      
+      .faq-item strong {
+        font-size: 16px;
+      }
+      
+      /* Mobile Footer */
+      footer {
+        padding: 48px 0 32px;
+      }
+      
+      footer .grid-3 {
+        gap: 32px;
+      }
+    }
+    
+    /* Extra Small Mobile */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 30px;
+      }
+      
+      h2 {
+        font-size: 24px;
       }
       
       .hero-image img,
       .feature-image img {
-        height: 360px;
+        height: 280px;
+      }
+      
+      .logo {
+        font-size: 12px;
       }
     }
   </style>
@@ -484,7 +670,15 @@
   <!-- Navigation -->
   <div class="site-header">
     <div class="wrap nav-wrap">
-      <div class="logo">Brave</div>
+      <div class="logo">
+        <span class="logo-brave">BRAVE</span>
+        <span class="logo-skincare">SKINCARE</span>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <ul class="nav-links">
         <li><a href="#products">Products</a></li>
         <li><a href="#bundle">Winter Defense</a></li>
@@ -750,6 +944,21 @@
 
   <!-- JavaScript -->
   <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+    
     // Tracking
     function track(cat, act, lbl) {
       console.log('Track:', cat, act, lbl);
