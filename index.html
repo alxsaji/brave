@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Men's Face Moisturizer for Dry Skin | Brave Skincare Canada</title>
-  <meta name="description" content="Best men's face moisturizer for dry skin. Dermatologist-tested men's winter moisturizer with clinical actives. Shop Winter Defense. Free shipping over $75." />
+  <title>Best Men's Face Moisturizer for Dry Skin | Brave Skincare Canada</title>
+  <meta name="description" content="Best men's face moisturizer for dry skin in Canada. Dermatologist-tested winter moisturizer with clinical actives. Shop Winter Defense. Free shipping over $75 🇨🇦" />
   <meta name="keywords" content="men's face moisturizer for dry skin, best men's face moisturizer for dry skin, men's winter moisturizer, mens moisturiser for dry skin, men's face cream for dry skin, best face cream for men dry skin, men's dry skin cream" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://braveskincare.ca/mens-winter-face-moisturizer" />
   
   <!-- Open Graph -->
   <meta property="og:title" content="Best Men's Face Moisturizer for Dry Skin | Brave" />
-  <meta property="og:description" content="Dermatologist-tested men's winter moisturizer. Clinical actives + Canadian botanicals. Shop Winter Defense." />
-  <meta property="og:image" content="Gemini_Generated_Image_hbuxwghbuxwghbux.png" />
+  <meta property="og:description" content="Dermatologist-tested men's winter moisturizer built for Canadian winters. Clinical actives + Canadian botanicals." />
+  <meta property="og:image" content="https://braveskincare.ca/Gemini_Generated_Image_hbuxwghbuxwghbux.png" />
   <meta property="og:type" content="product" />
+  <meta property="og:url" content="https://braveskincare.ca/mens-winter-face-moisturizer" />
+  <meta property="og:locale" content="en_CA" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Best Men's Face Moisturizer for Dry Skin" />
+  <meta name="twitter:description" content="Dermatologist-tested winter moisturizer for Canadian men. Shop Winter Defense." />
+  <meta name="twitter:image" content="https://braveskincare.ca/Gemini_Generated_Image_hbuxwghbuxwghbux.png" />
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -71,6 +82,40 @@
       z-index: 1;
     }
     
+    /* Breadcrumb */
+    .breadcrumb {
+      padding: 12px 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    
+    .breadcrumb ol {
+      list-style: none;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .breadcrumb li::after {
+      content: '›';
+      margin-left: 8px;
+      color: var(--muted);
+    }
+    
+    .breadcrumb li:last-child::after {
+      display: none;
+    }
+    
+    .breadcrumb a {
+      color: var(--muted);
+      font-weight: 500;
+    }
+    
+    .breadcrumb a:hover {
+      color: var(--accent);
+    }
+    
     /* Navigation */
     .site-header {
       background: rgba(250, 251, 250, 0.8);
@@ -89,7 +134,7 @@
       padding: 16px 0;
     }
     
-    /* Logo Styling - Green Theme */
+    /* Logo Styling */
     .logo {
       display: flex;
       align-items: center;
@@ -149,6 +194,58 @@
       background: var(--text);
       margin: 5px 0;
       transition: 0.3s;
+    }
+    
+    /* Urgency Badge */
+    .urgency-badge {
+      background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 12px;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    /* Countdown Timer */
+    .countdown {
+      display: inline-flex;
+      gap: 12px;
+      margin: 16px 0;
+      font-family: 'Inter', monospace;
+    }
+    
+    .countdown-item {
+      text-align: center;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 12px;
+      min-width: 60px;
+    }
+    
+    .countdown-value {
+      display: block;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+    
+    .countdown-label {
+      display: block;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
     
     /* Hero */
@@ -486,7 +583,10 @@
         padding: 0 20px;
       }
       
-      /* Mobile Navigation - Logo Centered */
+      .breadcrumb {
+        font-size: 12px;
+      }
+      
       .nav-wrap {
         padding: 14px 0;
         position: relative;
@@ -528,7 +628,19 @@
         display: flex;
       }
       
-      /* Mobile Hero */
+      .countdown {
+        gap: 8px;
+      }
+      
+      .countdown-item {
+        min-width: 50px;
+        padding: 6px 8px;
+      }
+      
+      .countdown-value {
+        font-size: 20px;
+      }
+      
       .hero {
         padding: 48px 0 60px;
       }
@@ -575,7 +687,6 @@
         height: 380px;
       }
       
-      /* Mobile Sections */
       section {
         padding: 60px 0;
       }
@@ -617,7 +728,6 @@
         height: 300px;
       }
       
-      /* Mobile Bundle */
       .bundle-section {
         padding: 48px 24px;
         border-radius: 24px;
@@ -632,7 +742,6 @@
         font-size: 24px;
       }
       
-      /* Mobile FAQ */
       .faq-item {
         padding: 20px;
       }
@@ -641,7 +750,6 @@
         font-size: 16px;
       }
       
-      /* Mobile Footer */
       footer {
         padding: 48px 0 32px;
       }
@@ -651,7 +759,6 @@
       }
     }
     
-    /* Extra Small Mobile */
     @media (max-width: 480px) {
       h1 {
         font-size: 30px;
@@ -668,6 +775,10 @@
       
       .logo {
         font-size: 12px;
+      }
+      
+      .countdown-value {
+        font-size: 18px;
       }
     }
   </style>
@@ -693,13 +804,52 @@
     </div>
   </div>
 
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <div class="wrap">
+      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="/">
+            <span itemprop="name">Home</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">Men's Winter Moisturizer</span>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ol>
+    </div>
+  </nav>
+
   <!-- Hero -->
   <header class="hero">
     <div class="wrap hero-grid">
       <div>
+        <span class="urgency-badge">🔥 Limited: Only 47 kits left</span>
         <div class="kicker">Men's Face Moisturizer for Dry Skin</div>
         <h1>Best Men's Face Moisturizer for Dry Skin</h1>
         <p class="sub">Dermatologist-tested men's winter moisturizer built for Canadian winters. Clinical actives + local botanicals in refillable packaging.</p>
+        
+        <div class="countdown">
+          <div class="countdown-item">
+            <span class="countdown-value" id="days">04</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="hours">18</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="mins">42</span>
+            <span class="countdown-label">Mins</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="secs">27</span>
+            <span class="countdown-label">Secs</span>
+          </div>
+        </div>
+        
         <div class="badge-row">
           <span class="badge">Dermatologist Tested</span>
           <span class="badge">Canadian Made</span>
@@ -712,7 +862,7 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="Gemini_Generated_Image_hbuxwghbuxwghbux.png" alt="Best men's face moisturizer for dry skin - Brave Skincare Winter Moisturizer with pine needles and ice crystals" loading="eager" />
+        <img src="Gemini_Generated_Image_hbuxwghbuxwghbux.png" alt="Best men's face moisturizer for dry skin - Brave Skincare Winter Moisturizer with pine needles and ice crystals" loading="eager" width="800" height="1000" />
       </div>
     </div>
   </header>
@@ -725,7 +875,7 @@
       <div class="grid-3">
         <div class="card">
           <div class="card-image">
-            <img src="Gemini_Generated_Image_2uiuaq2uiuaq2uiu.png" alt="Canadian winter dryness - snowy forest representing harsh weather conditions for men's winter moisturizer" loading="lazy" />
+            <img src="Gemini_Generated_Image_2uiuaq2uiuaq2uiu.png" alt="Canadian winter dryness - snowy forest representing harsh weather conditions for men's winter moisturizer" loading="lazy" width="600" height="480" />
           </div>
           <span class="pill">Winter Dryness</span>
           <h3>Sub-Zero Protection</h3>
@@ -733,7 +883,7 @@
         </div>
         <div class="card">
           <div class="card-image">
-            <img src="Gemini_Generated_Image_rhncllrhncllrhnc.png" alt="Frosted window showing urban winter life - pollution defense for men's face cream for dry skin" loading="lazy" />
+            <img src="Gemini_Generated_Image_rhncllrhncllrhnc.png" alt="Frosted window showing urban winter life - pollution defense for men's face cream for dry skin" loading="lazy" width="600" height="480" />
           </div>
           <span class="pill">Pollution Defense</span>
           <h3>Urban Shield</h3>
@@ -741,7 +891,7 @@
         </div>
         <div class="card">
           <div class="card-image">
-            <img src="Gemini_Generated_Image_bi01ybbi01ybbi01.png" alt="Clinical skincare ingredients - sea buckthorn berries and maple leaves for best face cream for men dry skin" loading="lazy" />
+            <img src="Gemini_Generated_Image_bi01ybbi01ybbi01.png" alt="Clinical skincare ingredients - sea buckthorn berries and maple leaves for best face cream for men dry skin" loading="lazy" width="600" height="480" />
           </div>
           <span class="pill">Clinical + Natural</span>
           <h3>Proven Results</h3>
@@ -753,7 +903,7 @@
     <!-- Feature Image -->
     <section class="wrap fade-in">
       <div class="feature-image">
-        <img src="Gemini_Generated_Image_jq15h5jq15h5jq15.png" alt="Best men's moisturiser for dry skin in Canadian winter - snowy pine forest landscape" loading="lazy" />
+        <img src="Gemini_Generated_Image_jq15h5jq15h5jq15.png" alt="Best men's moisturiser for dry skin in Canadian winter - snowy pine forest landscape" loading="lazy" width="1400" height="600" />
       </div>
     </section>
 
@@ -764,7 +914,7 @@
       <div class="grid-3">
         <div class="card">
           <div class="card-image">
-            <img src="Gemini_Generated_Image_qcnrzoqcnrzoqcnr.png" alt="Men's winter moisturizer product - Brave Skincare best men's face moisturizer for dry skin in sage green jar" loading="lazy" />
+            <img src="Gemini_Generated_Image_qcnrzoqcnrzoqcnr.png" alt="Men's winter moisturizer product - Brave Skincare best men's face moisturizer for dry skin in sage green jar" loading="lazy" width="600" height="480" />
           </div>
           <span class="pill">Hero Product</span>
           <h3>Winter Moisturizer</h3>
@@ -775,7 +925,7 @@
         </div>
         <div class="card">
           <div class="card-image">
-            <img src="Gemini_Generated_Image_nw6eb7nw6eb7nw6e.png" alt="Barrier repair serum for men - niacinamide mens moisturiser for dry skin in dropper bottle" loading="lazy" />
+            <img src="Gemini_Generated_Image_nw6eb7nw6eb7nw6e.png" alt="Barrier repair serum for men - niacinamide mens moisturiser for dry skin in dropper bottle" loading="lazy" width="600" height="480" />
           </div>
           <span class="pill">Defense</span>
           <h3>Barrier Serum</h3>
@@ -786,7 +936,7 @@
         </div>
         <div class="card">
           <div class="card-image">
-            <img src="Gemini_Generated_Image_jbd3y3jbd3y3jbd3.png" alt="Gentle hydrating cleanser for men's dry skin - pH balanced soap-free formula in green pump bottle" loading="lazy" />
+            <img src="Gemini_Generated_Image_jbd3y3jbd3y3jbd3.png" alt="Gentle hydrating cleanser for men's dry skin - pH balanced soap-free formula in green pump bottle" loading="lazy" width="600" height="480" />
           </div>
           <span class="pill">Essential</span>
           <h3>Hydrating Cleanser</h3>
@@ -801,7 +951,7 @@
     <!-- Bundle -->
     <section class="wrap fade-in" id="bundle">
       <div class="bundle-section">
-        <h2>Winter Defense Kit — Save $45</h2>
+        <h2>Winter Defense Kit — Save $45 Today</h2>
         <p class="lead">Complete 3-step system. The best men's face moisturizer for dry skin, barrier serum, and gentle cleanser. Free shipping over $75.</p>
         <div class="grid-2">
           <div class="card">
@@ -842,7 +992,7 @@
     <!-- Testimonial Image -->
     <section class="wrap fade-in">
       <div class="feature-image">
-        <img src="Gemini_Generated_Image_96jkh296jkh296jk.png" alt="Men using best men's moisturiser for dry skin - healthy glowing skin from Brave Skincare winter moisturizer" loading="lazy" />
+        <img src="Gemini_Generated_Image_96jkh296jkh296jk.png" alt="Men using best men's moisturiser for dry skin - healthy glowing skin from Brave Skincare winter moisturizer" loading="lazy" width="1400" height="600" />
       </div>
       <div style="text-align: center; margin-top: 32px;">
         <p style="font-size: 18px; color: var(--muted); font-style: italic; max-width: 680px; margin: 0 auto;">
@@ -857,34 +1007,46 @@
       <h2>Frequently Asked Questions</h2>
       <p class="lead">Common questions about the best men's face moisturizer for dry skin and winter defense routine.</p>
       
-      <div class="faq-item">
-        <strong>How is this different from regular men's face cream?</strong>
-        <p>Our mens moisturiser for dry skin is specifically formulated and tested for Canadian winter conditions (-30°C). Clinical actives remain stable and effective in extreme cold, unlike generic creams that freeze or lose potency.</p>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <strong itemprop="name">How is this different from regular men's face cream?</strong>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Our mens moisturiser for dry skin is specifically formulated and tested for Canadian winter conditions (-30°C). Clinical actives remain stable and effective in extreme cold, unlike generic creams that freeze or lose potency.</p>
+        </div>
       </div>
       
-      <div class="faq-item">
-        <strong>Is this the best men's face moisturizer for dry skin and sensitive skin?</strong>
-        <p>Yes. Dermatologist-tested, hypoallergenic, and free from harsh fragrance, sulfates, and parabens. Canadian oat and willow bark extracts provide natural soothing for sensitive skin types.</p>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <strong itemprop="name">Is this the best men's face moisturizer for dry skin and sensitive skin?</strong>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Yes. Dermatologist-tested, hypoallergenic, and free from harsh fragrance, sulfates, and parabens. Canadian oat and willow bark extracts provide natural soothing for sensitive skin types.</p>
+        </div>
       </div>
       
-      <div class="faq-item">
-        <strong>How fast is shipping for men's winter moisturizer in Canada?</strong>
-        <p>2–3 business days to major cities (Toronto, Montreal, Vancouver, Calgary, Ottawa). Free shipping on orders over $75. Express shipping available at checkout.</p>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <strong itemprop="name">How fast is shipping for men's winter moisturizer in Canada?</strong>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">2–3 business days to major cities (Toronto, Montreal, Vancouver, Calgary, Ottawa). Free shipping on orders over $75. Express shipping available at checkout.</p>
+        </div>
       </div>
       
-      <div class="faq-item">
-        <strong>What makes this the best face cream for men dry skin?</strong>
-        <p>Clinical-grade hyaluronic acid + Canadian sea buckthorn tested for -30°C, independently verified 72-hour hydration retention, refillable eco-packaging, and dermatologist endorsements. Built specifically for men's skin in harsh climates.</p>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <strong itemprop="name">What makes this the best face cream for men dry skin?</strong>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Clinical-grade hyaluronic acid + Canadian sea buckthorn tested for -30°C, independently verified 72-hour hydration retention, refillable eco-packaging, and dermatologist endorsements. Built specifically for men's skin in harsh climates.</p>
+        </div>
       </div>
       
-      <div class="faq-item">
-        <strong>How does the refill program work for men's dry skin cream?</strong>
-        <p>Keep your matte-glass containers and receive eco-friendly refill pouches quarterly. Save 15% on each refill order, reduce packaging waste, and cancel anytime. Sustainable skincare made easy.</p>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <strong itemprop="name">How does the refill program work for men's dry skin cream?</strong>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Keep your matte-glass containers and receive eco-friendly refill pouches quarterly. Save 15% on each refill order, reduce packaging waste, and cancel anytime. Sustainable skincare made easy.</p>
+        </div>
       </div>
       
-      <div class="faq-item">
-        <strong>What's your return policy on men's face moisturizer for dry skin?</strong>
-        <p>30-day money-back guarantee. If you're not seeing visible improvements in hydration, comfort, and skin health, contact us for a full refund. You can even keep the products.</p>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <strong itemprop="name">What's your return policy on men's face moisturizer for dry skin?</strong>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">30-day money-back guarantee. If you're not seeing visible improvements in hydration, comfort, and skin health, contact us for a full refund. You can even keep the products.</p>
+        </div>
       </div>
     </section>
 
@@ -924,32 +1086,207 @@
     </div>
   </footer>
 
-  <!-- Schema -->
+  <!-- Enhanced Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Men's Winter Face Moisturizer",
-    "brand": {"@type": "Brand", "name": "Brave Skincare"},
-    "description": "Best men's face moisturizer for dry skin. Dermatologist-tested men's winter moisturizer built for Canadian winters.",
-    "image": "Gemini_Generated_Image_hbuxwghbuxwghbux.png",
-    "sku": "BRV-WIN-50",
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "CAD",
-      "price": "45.00",
-      "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "2847"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Brave Skincare",
+        "url": "https://braveskincare.ca",
+        "logo": "https://braveskincare.ca/logo.png",
+        "sameAs": [
+          "https://www.instagram.com/braveskincarecanada",
+          "https://www.linkedin.com/company/brave-skincare-canada",
+          "https://www.youtube.com/@braveskincarecanada"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-272-8322",
+          "contactType": "Customer Service",
+          "areaServed": "CA",
+          "availableLanguage": ["en", "fr"]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Toronto",
+          "addressRegion": "ON",
+          "addressCountry": "CA"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "Men's Winter Face Moisturizer",
+        "brand": {
+          "@type": "Brand",
+          "name": "Brave Skincare"
+        },
+        "description": "Best men's face moisturizer for dry skin. Dermatologist-tested men's winter moisturizer built for Canadian winters with clinical actives and local botanicals.",
+        "image": "https://braveskincare.ca/Gemini_Generated_Image_hbuxwghbuxwghbux.png",
+        "sku": "BRV-WIN-50",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "CAD",
+          "price": "45.00",
+          "availability": "https://schema.org/InStock",
+          "url": "https://braveskincare.ca/mens-winter-face-moisturizer",
+          "priceValidUntil": "2025-12-31",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "CAD"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "CA"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "businessDays": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+              },
+              "cutoffTime": "14:00:00",
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 2,
+                "maxValue": 3,
+                "unitCode": "DAY"
+              }
+            }
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "2847",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Jordan"
+          },
+          "datePublished": "2025-01-15",
+          "reviewBody": "Finally found the best men's face moisturizer for dry skin that works in Toronto winters. My skin went from cracked to comfortable in days.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is this different from regular men's face cream?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our mens moisturiser for dry skin is specifically formulated and tested for Canadian winter conditions (-30°C). Clinical actives remain stable and effective in extreme cold, unlike generic creams that freeze or lose potency."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this the best men's face moisturizer for dry skin and sensitive skin?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Dermatologist-tested, hypoallergenic, and free from harsh fragrance, sulfates, and parabens. Canadian oat and willow bark extracts provide natural soothing for sensitive skin types."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes this the best face cream for men dry skin?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Clinical-grade hyaluronic acid + Canadian sea buckthorn tested for -30°C, independently verified 72-hour hydration retention, refillable eco-packaging, and dermatologist endorsements. Built specifically for men's skin in harsh climates."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Offer",
+        "name": "Winter Defense Kit",
+        "description": "Complete 3-step winter skincare system for men",
+        "price": "96.00",
+        "priceCurrency": "CAD",
+        "availability": "https://schema.org/InStock",
+        "itemOffered": {
+          "@type": "ProductGroup",
+          "name": "Winter Defense Kit",
+          "hasVariant": [
+            {
+              "@type": "Product",
+              "name": "Winter Moisturizer"
+            },
+            {
+              "@type": "Product",
+              "name": "Barrier Serum"
+            },
+            {
+              "@type": "Product",
+              "name": "Hydrating Cleanser"
+            }
+          ]
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "96.00",
+          "priceCurrency": "CAD",
+          "valueAddedTaxIncluded": true
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      }
+    ]
   }
   </script>
 
   <!-- JavaScript -->
   <script>
+    // Countdown Timer
+    function updateCountdown() {
+      const endDate = new Date();
+      endDate.setDate(endDate.getDate() + 4);
+      endDate.setHours(23, 59, 59, 999);
+      
+      function update() {
+        const now = new Date().getTime();
+        const distance = endDate - now;
+        
+        if (distance < 0) {
+          document.querySelector('.countdown').innerHTML = '<span style="color: var(--accent); font-weight: 700;">Offer Ended</span>';
+          return;
+        }
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('mins').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('secs').textContent = String(seconds).padStart(2, '0');
+      }
+      
+      update();
+      setInterval(update, 1000);
+    }
+    
+    updateCountdown();
+    
     // Mobile Menu Toggle
     const menuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
@@ -958,7 +1295,6 @@
       navLinks.classList.toggle('active');
     });
     
-    // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -976,7 +1312,7 @@
       if (t) track('CTA', 'click', t.getAttribute('data-track'));
     });
     
-    // Intersection Observer for fade-in animations
+    // Intersection Observer
     const observerOptions = {
       threshold: 0.15,
       rootMargin: '0px 0px -100px 0px'
@@ -991,7 +1327,6 @@
       });
     }, observerOptions);
     
-    // Observe all fade-in elements
     document.querySelectorAll('.fade-in').forEach(el => {
       observer.observe(el);
     });
@@ -1014,7 +1349,7 @@
     document.querySelectorAll('a[href="#checkout"]').forEach(btn => {
       btn.addEventListener('click', e => {
         e.preventDefault();
-        alert('✅ Winter Defense Kit added!\n\n💰 $96 CAD (Save $45)\n🚚 Free shipping\n⭐ Best men\'s face moisturizer for dry skin\n\nRedirecting to checkout...');
+        alert('✅ Winter Defense Kit added!\n\n💰 $96 CAD (Save $45)\n🚚 Free shipping\n⭐ Best men\'s face moisturizer for dry skin\n🔥 Only 47 kits left!\n\nRedirecting to checkout...');
         track('Checkout', 'initiate', 'winter-defense-kit');
       });
     });
