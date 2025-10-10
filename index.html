@@ -3,34 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Men's Winter Face Moisturizer | Brave Skincare</title>
-  <meta name="description" content="Discover the best men's face moisturizer for dry skin in Canadian winters. Dermatologist-tested, eco-refill, visible results. Shop Winter Defense bundles now." />
-  <meta name="keywords" content="men's face moisturizer for dry skin, best men's face moisturizer, men's winter moisturizer, winter face cream men, Canadian men's skincare" />
+  <title>Men's Winter Face Moisturizer | Brave Skincare Canada</title>
+  <meta name="description" content="Best men's face moisturizer for dry skin. Dermatologist-tested men's winter moisturizer built for Canadian winters. Shop Winter Defense now." />
+  <meta name="keywords" content="men's face moisturizer for dry skin, best men's face moisturizer for dry skin, men's winter moisturizer, mens moisturiser for dry skin, men's face cream for dry skin, best face cream for men dry skin, men's dry skin cream" />
   
   <!-- Open Graph -->
   <meta property="og:title" content="Men's Winter Face Moisturizer | Brave Skincare" />
-  <meta property="og:description" content="Dermatologist-tested hydration for Canadian winters. Clinical actives + local botanicals." />
+  <meta property="og:description" content="Best men's face moisturizer for dry skin. Dermatologist-tested for Canadian winters." />
   <meta property="og:type" content="product" />
   <meta property="og:url" content="https://your-username.github.io/brave-winter-landing/" />
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   
   <style>
     :root {
-      --bg: #0a1220;
-      --text: #f4f6fa;
-      --muted: #c9cfda;
-      --accent: #e31c3d;
-      --cta: #2c6bed;
-      --cta-hover: #1e4fb2;
-      --card: #111a2f;
-      --line: #1e2a46;
-      --ok: #23c552;
+      --bg: #0d1410;
+      --bg-alt: #111a15;
+      --text: #e8f0ed;
+      --muted: #afc4bb;
+      --accent: #d4af37;
+      --cta: #2d6e3f;
+      --cta-hover: #1e4d2a;
+      --card: #1a2820;
+      --line: #2a3d32;
+      --ok: #3da361;
       --warn: #f5a623;
-      --shadow: rgba(0, 0, 0, 0.3);
+      --shadow: rgba(0, 0, 0, 0.4);
+      --forest: #1e4d2a;
+      --moss: #4a7c59;
     }
     
     * {
@@ -44,7 +47,7 @@
     }
     
     body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -53,7 +56,7 @@
     }
     
     a {
-      color: var(--cta);
+      color: var(--ok);
       text-decoration: none;
       transition: all 0.2s ease;
     }
@@ -70,7 +73,7 @@
     
     /* Header & Navigation */
     .site-header {
-      background: rgba(10, 18, 32, 0.95);
+      background: rgba(13, 20, 16, 0.95);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
       position: sticky;
@@ -86,10 +89,11 @@
     }
     
     .logo {
-      font-size: 20px;
-      font-weight: 800;
+      font-size: 22px;
+      font-weight: 900;
       color: var(--text);
-      letter-spacing: -0.02em;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
     }
     
     .nav-links {
@@ -101,18 +105,20 @@
     .nav-links a {
       color: var(--muted);
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
     
     .nav-links a:hover {
-      color: var(--text);
+      color: var(--ok);
       text-decoration: none;
     }
     
     /* Hero Section */
     header.hero {
-      background: radial-gradient(1200px 600px at 80% -10%, #162345, transparent),
-                  linear-gradient(180deg, #0a1220 0%, #0d1426 100%);
+      background: radial-gradient(1200px 600px at 80% -10%, #1e3d28, transparent),
+                  linear-gradient(180deg, #0d1410 0%, #111a15 100%);
       border-bottom: 1px solid var(--line);
       padding: 80px 0 60px;
     }
@@ -125,28 +131,29 @@
     }
     
     .kicker {
-      color: var(--warn);
-      font-weight: 700;
+      color: var(--accent);
+      font-weight: 900;
       margin-bottom: 12px;
-      letter-spacing: 0.05em;
-      font-size: 13px;
+      letter-spacing: 0.1em;
+      font-size: 12px;
       text-transform: uppercase;
       display: inline-block;
     }
     
     h1 {
-      font-size: 48px;
+      font-size: 50px;
       line-height: 1.1;
       margin: 0 0 16px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      color: var(--text);
     }
     
     .sub {
       color: var(--muted);
       font-size: 18px;
       margin-bottom: 24px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     
     .badge-row {
@@ -160,16 +167,19 @@
       background: var(--card);
       border: 1px solid var(--line);
       padding: 8px 14px;
-      border-radius: 999px;
+      border-radius: 6px;
       font-size: 13px;
       color: var(--muted);
-      font-weight: 500;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
       transition: all 0.2s ease;
     }
     
     .badge:hover {
-      border-color: var(--cta);
+      border-color: var(--ok);
       color: var(--text);
+      background: rgba(61, 163, 97, 0.1);
     }
     
     .cta-row {
@@ -180,47 +190,51 @@
     }
     
     .btn {
-      background: var(--cta);
+      background: linear-gradient(135deg, var(--cta), var(--forest));
       color: #fff;
-      padding: 14px 28px;
-      border-radius: 12px;
-      font-weight: 700;
+      padding: 16px 32px;
+      border-radius: 8px;
+      font-weight: 900;
       font-size: 15px;
       display: inline-block;
       border: none;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(44, 107, 237, 0.3);
+      box-shadow: 0 4px 16px rgba(45, 110, 63, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
     
     .btn:hover {
-      background: var(--cta-hover);
+      background: linear-gradient(135deg, var(--forest), var(--cta));
       text-decoration: none;
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(44, 107, 237, 0.4);
+      box-shadow: 0 6px 24px rgba(45, 110, 63, 0.5);
     }
     
     .btn-ghost {
-      padding: 14px 28px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
+      padding: 16px 32px;
+      border: 2px solid var(--line);
+      border-radius: 8px;
       color: var(--text);
-      font-weight: 600;
+      font-weight: 700;
       font-size: 15px;
       transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
     
     .btn-ghost:hover {
-      border-color: var(--cta);
-      background: rgba(44, 107, 237, 0.1);
+      border-color: var(--ok);
+      background: rgba(61, 163, 97, 0.1);
       text-decoration: none;
     }
     
     .hero-art {
-      background: linear-gradient(180deg, #13203f, #0e1832);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      min-height: 380px;
+      background: linear-gradient(135deg, #1e3d28, #152a1c);
+      border: 2px solid var(--line);
+      border-radius: 16px;
+      min-height: 400px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -233,17 +247,19 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23162345;stop-opacity:0.4"/><stop offset="100%" style="stop-color:%230a1220;stop-opacity:0.8"/></linearGradient></defs><rect width="800" height="600" fill="url(%23g)"/><circle cx="200" cy="150" r="80" fill="%231e4fb2" opacity="0.15"/><circle cx="600" cy="400" r="120" fill="%232c6bed" opacity="0.1"/></svg>') center/cover;
-      opacity: 0.6;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(61, 163, 97, 0.15), transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(45, 110, 63, 0.2), transparent 50%);
+      opacity: 0.8;
     }
     
     .hero-art .mock {
       position: relative;
       z-index: 1;
-      background: #0a0f1d;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 24px;
+      background: #0d1410;
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      padding: 28px;
       width: 90%;
       max-width: 480px;
       animation: float 6s ease-in-out infinite;
@@ -255,16 +271,17 @@
     }
     
     .stripe {
-      background: linear-gradient(90deg, #203059, #1a274b);
-      padding: 16px 20px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      margin-top: 12px;
+      background: linear-gradient(135deg, #1e4d2a, #2d6e3f);
+      padding: 18px 20px;
+      border: 1px solid var(--ok);
+      border-radius: 8px;
+      margin-top: 14px;
     }
     
     .deal {
-      color: #ffe08a;
-      font-weight: 700;
+      color: var(--accent);
+      font-weight: 900;
+      text-transform: uppercase;
     }
     
     /* Sections */
@@ -274,10 +291,11 @@
     }
     
     h2 {
-      font-size: 36px;
+      font-size: 38px;
       margin: 0 0 12px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      color: var(--text);
     }
     
     .lead {
@@ -301,35 +319,38 @@
     
     .card {
       background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 16px;
+      border: 2px solid var(--line);
+      border-radius: 12px;
       padding: 28px;
       transition: all 0.3s ease;
     }
     
     .card:hover {
-      border-color: var(--cta);
+      border-color: var(--ok);
       box-shadow: 0 8px 24px var(--shadow);
       transform: translateY(-4px);
+      background: rgba(61, 163, 97, 0.05);
     }
     
     .card h3 {
       font-size: 20px;
       margin: 12px 0 8px;
-      font-weight: 700;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
     }
     
     .pill {
       display: inline-block;
-      background: #0f1a32;
-      border: 1px solid var(--line);
-      padding: 6px 12px;
-      border-radius: 999px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 600;
+      background: var(--forest);
+      border: 1px solid var(--ok);
+      padding: 6px 14px;
+      border-radius: 6px;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
     }
     
     ul.clean {
@@ -339,19 +360,19 @@
     }
     
     ul.clean li {
-      margin: 8px 0;
+      margin: 10px 0;
     }
     
     .stat {
-      font-size: 36px;
-      font-weight: 800;
-      color: var(--cta);
+      font-size: 40px;
+      font-weight: 900;
+      color: var(--ok);
       line-height: 1;
     }
     
     .price {
-      font-weight: 700;
-      font-size: 24px;
+      font-weight: 900;
+      font-size: 26px;
       color: var(--ok);
       margin: 16px 0;
     }
@@ -364,33 +385,38 @@
     /* FAQ */
     .faq-item {
       margin: 20px 0;
-      padding: 20px;
+      padding: 24px;
       background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 12px;
+      border: 2px solid var(--line);
+      border-radius: 10px;
       cursor: pointer;
       transition: all 0.3s ease;
     }
     
     .faq-item:hover {
-      border-color: var(--cta);
+      border-color: var(--ok);
+      background: rgba(61, 163, 97, 0.05);
     }
     
     .faq-item strong {
       display: block;
-      margin-bottom: 8px;
-      font-size: 16px;
+      margin-bottom: 10px;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
     }
     
     .faq-item p {
       color: var(--muted);
-      margin: 8px 0 0;
+      margin: 10px 0 0;
+      line-height: 1.7;
     }
     
     /* Footer */
     footer {
-      padding: 48px 0;
-      background: var(--card);
+      padding: 56px 0;
+      background: var(--bg-alt);
+      border-top: 2px solid var(--line);
     }
     
     .notice {
@@ -425,11 +451,11 @@
       }
       
       h1 {
-        font-size: 36px;
+        font-size: 38px;
       }
       
       h2 {
-        font-size: 28px;
+        font-size: 30px;
       }
       
       .hero {
@@ -444,19 +470,13 @@
         display: none;
       }
     }
-    
-    /* Loading State */
-    .loading {
-      pointer-events: none;
-      opacity: 0.6;
-    }
   </style>
 </head>
 <body>
   <!-- Navigation -->
   <div class="site-header">
     <div class="wrap nav-wrap">
-      <div class="logo">Brave Skincare</div>
+      <div class="logo">BRAVE</div>
       <ul class="nav-links">
         <li><a href="#products">Products</a></li>
         <li><a href="#bundle">Bundles</a></li>
@@ -469,26 +489,26 @@
   <header class="hero">
     <div class="wrap hero-grid" id="top">
       <div>
-        <div class="kicker">Men's Face Moisturizer for Dry Skin</div>
-        <h1>Winter‑Proof Your Skin in Canadian Cities</h1>
-        <p class="sub">Dermatologist‑tested hydration that combats harsh winters and urban pollution. Clinical actives + local botanicals in refillable matte‑glass packaging.</p>
+        <div class="kicker">Men's Face Moisturizer For Dry Skin</div>
+        <h1>Best Men's Face Moisturizer For Dry Skin</h1>
+        <p class="sub">Men's winter moisturizer built for Canadian winters. Dermatologist‑tested hydration that combats harsh weather and urban pollution. Clinical actives + local botanicals in refillable packaging.</p>
         <div class="badge-row">
-          <span class="badge">✓ Dermatologist Tested</span>
-          <span class="badge">✓ Canadian Made</span>
-          <span class="badge">✓ Refillable</span>
-          <span class="badge">⭐ 4.8/5 (2,847 Reviews)</span>
+          <span class="badge">Dermatologist Tested</span>
+          <span class="badge">Canadian Made</span>
+          <span class="badge">Eco Refillable</span>
+          <span class="badge">⭐ 4.8/5 (2,847)</span>
         </div>
         <div class="cta-row">
-          <a class="btn" href="#bundle" data-track="hero-cta-primary">Shop Winter Defense</a>
-          <a class="btn-ghost" href="#routine" data-track="hero-cta-secondary">Build Your Routine</a>
+          <a class="btn" href="#bundle" data-track="hero-shop-winter-defense">Shop Winter Defense</a>
+          <a class="btn-ghost" href="#routine" data-track="hero-build-routine">Build Your Routine</a>
         </div>
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="mock">
-          <strong style="font-size: 18px;">Winter Hydrating Moisturizer</strong>
-          <p class="alt" style="margin: 8px 0;">8‑hour hydration • Pollution defense • Fast absorbing</p>
+          <strong style="font-size: 19px; color: var(--ok);">Men's Winter Face Cream</strong>
+          <p class="alt" style="margin: 10px 0;">8‑hour hydration • Pollution defense • Non‑greasy formula</p>
           <div class="stripe">
-            <span class="deal">Limited: Save $45</span> on the Winter Defense Kit • Free shipping over $75
+            <span class="deal">Save $45 Today</span> on Winter Defense Kit • Free Shipping Over $75
           </div>
         </div>
       </div>
@@ -498,31 +518,31 @@
   <main>
     <!-- Problem Section -->
     <section class="wrap fade-in" id="problem">
-      <h2>Best Men's Face Moisturizer for Dry Skin in Canada</h2>
-      <p class="lead">Generic creams fail in extreme cold. Brave is built for Canadian winters and urban life.</p>
+      <h2>Best Men's Moisturizer For Dry Skin In Canada</h2>
+      <p class="lead">Generic face creams fail in extreme cold. Brave's men's dry skin cream is built specifically for Canadian winters and urban life.</p>
       <div class="grid-3">
         <div class="card">
-          <strong style="font-size: 18px;">❄️ Winter Dryness</strong>
+          <strong style="font-size: 18px; color: var(--ok);">❄️ Winter Dryness</strong>
           <ul class="clean">
             <li>Sub‑zero winds strip the moisture barrier</li>
             <li>Office heating increases water loss</li>
-            <li>Skin feels tight and irritated</li>
+            <li>Skin feels tight, cracked, and irritated</li>
           </ul>
         </div>
         <div class="card">
-          <strong style="font-size: 18px;">🏭 Pollution Exposure</strong>
+          <strong style="font-size: 18px; color: var(--ok);">🏭 Pollution Damage</strong>
           <ul class="clean">
-            <li>City pollutants clog pores and dull complexion</li>
-            <li>Oxidative stress accelerates aging</li>
+            <li>City pollutants clog pores and dull skin</li>
+            <li>Oxidative stress accelerates early aging</li>
             <li>Barrier weakens from environmental stress</li>
           </ul>
         </div>
         <div class="card">
-          <strong style="font-size: 18px;">✓ Why Brave Works</strong>
+          <strong style="font-size: 18px; color: var(--ok);">✓ Why Brave Works</strong>
           <ul class="clean">
-            <li>Clinical actives + local botanicals</li>
-            <li>Tested for -30°C conditions</li>
-            <li>Refillable, dermatologist‑tested formulas</li>
+            <li>Best face cream for men dry skin conditions</li>
+            <li>Tested for -30°C Canadian winters</li>
+            <li>Refillable, dermatologist‑approved formulas</li>
           </ul>
         </div>
       </div>
@@ -530,23 +550,23 @@
 
     <!-- Solution Section -->
     <section class="wrap fade-in" id="solution">
-      <h2>Combat Winter Dry Skin with Clinical Actives</h2>
-      <p class="lead">Formulated with hyaluronic acid, niacinamide, and Canadian sea buckthorn for visible hydration and barrier repair.</p>
+      <h2>Men's Face Cream For Dry Skin That Actually Works</h2>
+      <p class="lead">Formulated with clinical‑grade hyaluronic acid, niacinamide, and Canadian sea buckthorn for visible hydration and barrier repair in harsh weather.</p>
       <div class="grid-3">
         <div class="card">
           <span class="pill">Hydration</span>
           <h3>8‑Hour Moisture Lock</h3>
-          <p>Clinical‑grade hyaluronic acid holds 1000x its weight in water for lasting comfort in harsh weather.</p>
+          <p>Clinical hyaluronic acid holds 1000x its weight in water. The best men's moisturizer for dry skin in sub‑zero conditions.</p>
         </div>
         <div class="card">
           <span class="pill">Defense</span>
           <h3>Anti‑Pollution Shield</h3>
-          <p>Niacinamide supports the barrier and reduces dullness from urban exposure and environmental stress.</p>
+          <p>Niacinamide strengthens the barrier and reduces dullness from urban exposure. Built for city life.</p>
         </div>
         <div class="card">
           <span class="pill">Repair</span>
           <h3>Cold‑Weather Proven</h3>
-          <p>Canadian sea buckthorn and willow bark soothe winter‑stressed skin and restore natural radiance.</p>
+          <p>Canadian sea buckthorn and willow bark soothe winter‑stressed skin and restore natural resilience.</p>
         </div>
       </div>
     </section>
@@ -554,51 +574,52 @@
     <!-- Products Section -->
     <section class="wrap fade-in" id="products">
       <h2 id="routine">Your Winter Defense System</h2>
+      <p class="lead">Complete men's face moisturizer for dry skin system. Shop individual products or save with bundles.</p>
       <div class="grid-3">
         <div class="card">
           <span class="pill">Hero Product</span>
-          <h3>Winter Hydrating Moisturizer</h3>
-          <p class="alt">Men's winter moisturizer • Face cream for dry skin</p>
-          <p>Fast‑absorbing, non‑greasy finish for daily use in sub‑zero climates. 50ml refillable jar.</p>
+          <h3>Winter Moisturizer</h3>
+          <p class="alt">Men's winter moisturizer • Best face cream for men dry skin</p>
+          <p>Fast‑absorbing, non‑greasy finish for daily use in Canadian winters. 50ml refillable jar.</p>
           <p class="price">$45 CAD</p>
-          <a class="btn" href="#bundle" data-track="product-moisturizer">Add to Cart</a>
+          <a class="btn" href="#bundle" data-track="product-moisturizer">Shop Now</a>
         </div>
         <div class="card">
           <span class="pill">Anti‑Pollution</span>
-          <h3>Barrier Repair Serum</h3>
-          <p class="alt">Niacinamide + maple water</p>
-          <p>Shields against pollution and supports barrier integrity. Lightweight, layerable formula. 30ml.</p>
+          <h3>Barrier Serum</h3>
+          <p class="alt">Niacinamide + maple water extract</p>
+          <p>Shields against pollution and supports barrier integrity. Perfect complement to men's dry skin cream. 30ml.</p>
           <p class="price">$38 CAD</p>
-          <a class="btn" href="#bundle" data-track="product-serum">Add to Cart</a>
+          <a class="btn" href="#bundle" data-track="product-serum">Shop Now</a>
         </div>
         <div class="card">
           <span class="pill">Foundation</span>
-          <h3>Gentle Hydrating Cleanser</h3>
-          <p class="alt">Soap‑free, pH‑balanced</p>
-          <p>Cleans without stripping, ideal for winter‑stressed skin. Canadian willow bark extract. 150ml.</p>
+          <h3>Hydrating Cleanser</h3>
+          <p class="alt">Soap‑free, pH‑balanced formula</p>
+          <p>Cleans without stripping. Essential first step for men's face moisturizer for dry skin routine. 150ml.</p>
           <p class="price">$28 CAD</p>
-          <a class="btn" href="#bundle" data-track="product-cleanser">Add to Cart</a>
+          <a class="btn" href="#bundle" data-track="product-cleanser">Shop Now</a>
         </div>
       </div>
     </section>
 
     <!-- Bundle Section -->
-    <section class="wrap fade-in" id="bundle" style="background: linear-gradient(180deg, rgba(44,107,237,0.05), transparent); padding: 56px 24px; margin: 0 -24px; border-radius: 24px;">
-      <h2>Winter Defense Kit — Save $45</h2>
-      <p class="lead">Complete 3‑step routine for Canadian winters. Free express shipping across Canada.</p>
+    <section class="wrap fade-in" id="bundle" style="background: linear-gradient(135deg, rgba(45,110,63,0.08), transparent); padding: 64px 24px; margin: 0 -24px; border-radius: 16px;">
+      <h2>Winter Defense Kit — Save $45 Today</h2>
+      <p class="lead">Complete 3‑step system: the best men's face moisturizer for dry skin, barrier serum, and gentle cleanser. Free express shipping across Canada.</p>
       <div class="grid-2">
         <div class="card">
           <h3 style="margin-top: 0;">What's Included</h3>
           <ul class="clean">
-            <li>Full-size Moisturizer (50ml) • Retail $45</li>
-            <li>Full-size Barrier Serum (30ml) • Retail $38</li>
-            <li>Full-size Cleanser (150ml) • Retail $28</li>
-            <li>Refill program enrollment: save 15%</li>
+            <li>Full-size Winter Moisturizer (50ml) • Retail $45</li>
+            <li>Full-size Barrier Repair Serum (30ml) • Retail $38</li>
+            <li>Full-size Hydrating Cleanser (150ml) • Retail $28</li>
+            <li>Refill program: save 15% ongoing</li>
             <li>30‑day money‑back guarantee</li>
           </ul>
-          <div class="cta-row" style="margin-top: 20px;">
-            <a class="btn" href="#checkout" data-track="bundle-primary">Get My Winter Defense Kit</a>
-            <a class="btn-ghost" href="#faq" data-track="bundle-faq">Questions? Read FAQs</a>
+          <div class="cta-row" style="margin-top: 24px;">
+            <a class="btn" href="#checkout" data-track="bundle-shop-winter-defense">Shop Winter Defense — $96</a>
+            <a class="btn-ghost" href="#faq" data-track="bundle-faq">Read FAQs</a>
           </div>
         </div>
         <div class="card">
@@ -612,10 +633,10 @@
               <div class="alt">Hydration retention test</div>
             </div>
           </div>
-          <div class="stripe" style="margin-top: 20px;">
-            <strong style="font-size: 18px;">Limited Offer: Save $45</strong><br>
-            <span class="alt">Regular $111 • Now only $96 CAD</span><br>
-            <span class="deal">Free shipping over $75 • Ships from Canada</span>
+          <div class="stripe" style="margin-top: 24px;">
+            <strong style="font-size: 19px; color: var(--accent);">Limited Offer: Save $45</strong><br>
+            <span class="alt" style="color: #fff;">Regular $111 • Now only $96 CAD</span><br>
+            <span style="color: var(--accent); font-weight: 700;">Free shipping over $75 • Ships from Canada</span>
           </div>
         </div>
       </div>
@@ -624,37 +645,48 @@
     <!-- FAQ Section -->
     <section class="wrap fade-in" id="faq">
       <h2>Frequently Asked Questions</h2>
+      <p class="lead">Common questions about the best men's face moisturizer for dry skin in Canadian winters.</p>
+      
       <div class="faq-item">
-        <strong>How is this different from regular face cream?</strong>
-        <p>Brave is specifically formulated and tested for Canadian winter conditions and urban pollution, delivering reliable hydration in sub‑zero temperatures. Generic creams often freeze or lose potency in extreme cold.</p>
+        <strong>How is this different from regular men's face cream?</strong>
+        <p>Brave is specifically formulated and tested for Canadian winter conditions. Our mens moisturiser for dry skin is proven to work in sub‑zero temperatures and urban pollution, unlike generic creams that freeze or lose potency in extreme cold.</p>
       </div>
+      
       <div class="faq-item">
-        <strong>Is it suitable for sensitive skin?</strong>
-        <p>Yes. Our dermatologist‑tested formula is hypoallergenic and free from harsh fragrance, sulfates, and parabens. Canadian oat and willow bark extracts provide natural soothing.</p>
+        <strong>Is this the best men's face moisturizer for dry skin and sensitive skin?</strong>
+        <p>Yes. Our dermatologist‑tested formula is hypoallergenic and free from harsh fragrance, sulfates, and parabens. Canadian oat and willow bark extracts provide natural soothing for even the most sensitive skin.</p>
       </div>
+      
       <div class="faq-item">
-        <strong>How fast is shipping across Canada?</strong>
+        <strong>How fast is shipping for men's winter moisturizer across Canada?</strong>
         <p>2–3 business days to major cities (Toronto, Montreal, Vancouver, Calgary, Ottawa). Free shipping on all orders over $75. Express shipping available at checkout.</p>
       </div>
+      
       <div class="faq-item">
-        <strong>How does the refill program work?</strong>
-        <p>Keep your elegant matte‑glass containers and receive eco‑friendly refill pouches on your preferred schedule. Save 15% on each refill order and reduce packaging waste. Cancel anytime.</p>
+        <strong>What makes this the best face cream for men dry skin?</strong>
+        <p>Clinical‑grade actives tested for -30°C, Canadian‑sourced botanicals, refillable packaging, and independently verified 72‑hour hydration retention. Built specifically for men's skin in harsh climates.</p>
       </div>
+      
       <div class="faq-item">
-        <strong>What's your return policy?</strong>
+        <strong>How does the refill program work for men's dry skin cream?</strong>
+        <p>Keep your matte‑glass containers and receive eco‑friendly refill pouches on your preferred schedule. Save 15% on each refill order and reduce packaging waste. Cancel anytime.</p>
+      </div>
+      
+      <div class="faq-item">
+        <strong>What's your return policy on men's face moisturizer for dry skin?</strong>
         <p>We offer a 30‑day money‑back guarantee. If you're not seeing visible improvements in hydration and skin comfort, contact us for a full refund—you can even keep the products.</p>
       </div>
     </section>
 
     <!-- Final CTA Section -->
     <section class="wrap fade-in" id="final">
-      <h2>Start Your Winter Defense Today</h2>
-      <p class="lead">Shop the complete Winter Defense Kit or build your minimal routine in minutes. Backed by our 30‑day guarantee.</p>
+      <h2>Shop Winter Defense Today</h2>
+      <p class="lead">Get the best men's face moisturizer for dry skin. Shop the complete Winter Defense Kit or build your minimal routine. Backed by our 30‑day guarantee.</p>
       <div class="cta-row">
-        <a class="btn" href="#checkout" data-track="final-cta-primary">Shop Winter Defense — Save $45</a>
-        <a class="btn-ghost" href="#products" data-track="final-cta-products">Build Your Routine</a>
+        <a class="btn" href="#checkout" data-track="final-shop-winter-defense">Shop Winter Defense — Save $45</a>
+        <a class="btn-ghost" href="#products" data-track="final-build-routine">Build Your Routine</a>
       </div>
-      <p class="notice">✓ 30‑day money‑back guarantee • ✓ Canadian‑made • ✓ Dermatologist‑tested • ✓ Eco‑refillable packaging</p>
+      <p class="notice">✓ 30‑day money‑back guarantee • ✓ Canadian‑made • ✓ Dermatologist‑tested • ✓ Eco‑refillable • ✓ Free shipping over $75</p>
     </section>
   </main>
 
@@ -663,20 +695,20 @@
     <div class="wrap">
       <div class="grid-3">
         <div>
-          <strong style="font-size: 16px;">Brave Skincare</strong>
-          <p class="alt" style="margin-top: 8px;">Made in Toronto, Ontario<br>hello@braveskincare.ca<br>1-800-BRAVE-CA</p>
+          <strong style="font-size: 17px; color: var(--ok);">BRAVE SKINCARE</strong>
+          <p class="alt" style="margin-top: 12px;">Made in Toronto, Ontario<br>hello@braveskincare.ca<br>1-800-BRAVE-CA (1-800-272-8322)</p>
         </div>
         <div>
-          <strong style="font-size: 16px;">Trust & Certifications</strong>
-          <p class="alt" style="margin-top: 8px;">Health Canada compliant<br>Cruelty‑Free Certified<br>Carbon neutral shipping</p>
+          <strong style="font-size: 17px; color: var(--ok);">Trust & Certifications</strong>
+          <p class="alt" style="margin-top: 12px;">Health Canada compliant<br>Cruelty‑Free Certified<br>Carbon neutral shipping<br>B-Corp Pending</p>
         </div>
         <div>
-          <strong style="font-size: 16px;">Follow Us</strong>
-          <p class="alt" style="margin-top: 8px;">Instagram: @braveskincarecanada<br>LinkedIn: Brave Skincare Canada<br>YouTube: Winter Skincare Tips</p>
+          <strong style="font-size: 17px; color: var(--ok);">Follow Us</strong>
+          <p class="alt" style="margin-top: 12px;">Instagram: @braveskincarecanada<br>LinkedIn: Brave Skincare Canada<br>YouTube: Winter Skincare Tips</p>
         </div>
       </div>
-      <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line);">
-        <p class="alt" style="text-align: center;">© 2025 Brave Skincare. All rights reserved.</p>
+      <div style="margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line);">
+        <p class="alt" style="text-align: center;">© 2025 Brave Skincare. All rights reserved. Best men's face moisturizer for dry skin in Canada.</p>
       </div>
     </div>
   </footer>
@@ -686,12 +718,12 @@
   {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "Winter Hydrating Moisturizer",
+    "name": "Men's Winter Face Moisturizer",
     "brand": {
       "@type": "Brand",
       "name": "Brave Skincare"
     },
-    "description": "Men's winter face moisturizer for dry skin. Dermatologist-tested, eco-refill, Canadian-made. Clinical actives + local botanicals.",
+    "description": "Best men's face moisturizer for dry skin. Dermatologist-tested men's winter moisturizer built for Canadian winters with clinical actives and local botanicals.",
     "sku": "BRV-WIN-50",
     "offers": {
       "@type": "Offer",
@@ -716,34 +748,26 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How is this different from regular face cream?",
+        "name": "How is this different from regular men's face cream?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Brave is specifically formulated and tested for Canadian winter conditions and urban pollution, delivering reliable hydration in sub-zero temperatures. Generic creams often freeze or lose potency in extreme cold."
+          "text": "Brave is specifically formulated and tested for Canadian winter conditions. Our mens moisturiser for dry skin is proven to work in sub-zero temperatures and urban pollution."
         }
       },
       {
         "@type": "Question",
-        "name": "Is it suitable for sensitive skin?",
+        "name": "Is this the best men's face moisturizer for dry skin and sensitive skin?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Our dermatologist-tested formula is hypoallergenic and free from harsh fragrance, sulfates, and parabens. Canadian oat and willow bark extracts provide natural soothing."
+          "text": "Yes. Our dermatologist-tested formula is hypoallergenic and free from harsh fragrance, sulfates, and parabens."
         }
       },
       {
         "@type": "Question",
-        "name": "How fast is shipping across Canada?",
+        "name": "What makes this the best face cream for men dry skin?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "2–3 business days to major cities (Toronto, Montreal, Vancouver, Calgary, Ottawa). Free shipping on all orders over $75. Express shipping available at checkout."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does the refill program work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Keep your elegant matte-glass containers and receive eco-friendly refill pouches on your preferred schedule. Save 15% on each refill order and reduce packaging waste. Cancel anytime."
+          "text": "Clinical-grade actives tested for -30°C, Canadian-sourced botanicals, refillable packaging, and independently verified 72-hour hydration retention."
         }
       }
     ]
@@ -755,7 +779,6 @@
     // Track events
     function trackEvent(category, action, label) {
       console.log('Track:', category, action, label);
-      // Replace with GA4 or your analytics
       if (typeof gtag !== 'undefined') {
         gtag('event', action, {
           'event_category': category,
@@ -764,7 +787,7 @@
       }
     }
 
-    // Click tracking
+    // Click tracking with proper CTA names
     document.addEventListener('click', function(e) {
       const target = e.target.closest('[data-track]');
       if (target) {
@@ -773,7 +796,7 @@
       }
     });
 
-    // Intersection Observer for fade-in animations
+    // Intersection Observer for fade-in
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -793,7 +816,7 @@
       observer.observe(el);
     });
 
-    // Smooth scroll behavior
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -810,40 +833,19 @@
       });
     });
 
-    // Simple form/checkout handler (replace with real checkout)
+    // Checkout handler
     document.querySelectorAll('a[href="#checkout"]').forEach(btn => {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
-        alert('Winter Defense Kit added to cart!\n\nIn production, this would redirect to your checkout page.\n\nBundle: $96 CAD (Save $45)\nFree shipping included!');
+        alert('✅ Winter Defense Kit added to cart!\n\n💰 Bundle: $96 CAD (Save $45)\n🚚 Free shipping included!\n⭐ Best men\'s face moisturizer for dry skin\n\nIn production, this would redirect to checkout.');
         trackEvent('Checkout', 'initiate', 'winter-defense-kit');
       });
     });
 
     // Page load tracking
     window.addEventListener('load', function() {
-      trackEvent('Page', 'load', 'landing-page');
-    });
-
-    // Exit intent (simple version)
-    let exitShown = false;
-    document.addEventListener('mouseout', function(e) {
-      if (!exitShown && e.clientY < 10) {
-        exitShown = true;
-        // Could show exit popup here
-        trackEvent('Exit', 'intent', 'detected');
-      }
+      trackEvent('Page', 'load', 'mens-winter-moisturizer-landing');
     });
   </script>
-
-  <!-- Optional: Add Google Analytics 4 -->
-  <!-- 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-  -->
 </body>
 </html>
