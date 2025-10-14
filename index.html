@@ -13,7 +13,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Best Men's Face Moisturizer for Dry Skin | Brave" />
   <meta property="og:description" content="Dermatologist-tested men's winter moisturizer built for Canadian winters. Clinical actives + Canadian botanicals." />
-  <meta property="og:image" content="Gemini_Generated_Image_hbuxwghbuxwghbux.png" />
+  <meta property="og:image" content="https://braveskincare.ca/images/winter-moisturizer.jpg" />
   <meta property="og:type" content="product" />
   <meta property="og:url" content="https://braveskincare.ca/mens-winter-face-moisturizer" />
   <meta property="og:locale" content="en_CA" />
@@ -22,12 +22,17 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Best Men's Face Moisturizer for Dry Skin" />
   <meta name="twitter:description" content="Dermatologist-tested winter moisturizer for Canadian men. Shop Winter Defense." />
-  <meta name="twitter:image" content="Gemini_Generated_Image_hbuxwghbuxwghbux.png" />
+  <meta name="twitter:image" content="https://braveskincare.ca/images/winter-moisturizer.jpg" />
   
-  <!-- Fonts -->
+  <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+  
+  <!-- Preload Critical Assets (Core Web Vitals Optimization) -->
+  <link rel="preload" as="image" href="Gemini_Generated_Image_hbuxwghbuxwghbux.png" fetchpriority="high" />
   
   <style>
     :root {
@@ -270,6 +275,18 @@
       letter-spacing: 0.02em;
       margin-bottom: 16px;
     }
+
+    /* Geo-Dynamic Location Tag */
+    .geo-location {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-left: 8px;
+    }
     
     h1 {
       font-size: 56px;
@@ -302,6 +319,17 @@
       font-size: 13px;
       color: var(--accent-dark);
       font-weight: 500;
+    }
+
+    /* NEW: Guarantee Badge in Hero */
+    .badge-guarantee {
+      background: linear-gradient(135deg, #ffd700, #ffed4e);
+      color: #1a1a1a;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 2px solid #ffc107;
     }
     
     .cta-row {
@@ -371,6 +399,39 @@
         opacity: 1;
         transform: scale(1);
       }
+    }
+
+    /* NEW: Sensory Description Callout */
+    .sensory-callout {
+      background: var(--card);
+      border: 2px solid var(--accent-light);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 24px 0;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .sensory-callout .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .sensory-callout .text {
+      flex: 1;
+    }
+
+    .sensory-callout .text strong {
+      display: block;
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .sensory-callout .text span {
+      font-size: 14px;
+      color: var(--muted);
     }
     
     /* Sections */
@@ -607,7 +668,6 @@
       animation: slideUp 0.4s ease-out;
     }
 
-    /* ===== WELCOME POPUP ===== */
     .welcome-popup-content {
       padding: 40px 32px;
       text-align: center;
@@ -651,7 +711,6 @@
       font-size: 18px;
     }
 
-    /* ===== EXIT INTENT POPUP ===== */
     .exit-popup-content {
       padding: 40px 32px;
       text-align: center;
@@ -693,7 +752,6 @@
       font-weight: 600;
     }
 
-    /* ===== REFILL ENROLLMENT POPUP ===== */
     .refill-popup-content {
       padding: 40px 32px;
     }
@@ -743,7 +801,6 @@
       font-size: 20px;
     }
 
-    /* ===== FORM STYLES ===== */
     .popup-form {
       margin-top: 24px;
     }
@@ -800,7 +857,6 @@
       line-height: 1.5;
     }
 
-    /* ===== BUTTON STYLES ===== */
     .popup-btn-primary {
       width: 100%;
       padding: 16px 24px;
@@ -855,7 +911,6 @@
       background: #e0e0e0;
     }
 
-    /* ===== INLINE CTA SECTIONS ===== */
     .refill-enrollment-banner {
       background: linear-gradient(135deg, var(--accent-light) 0%, #dff2e8 100%);
       border: 2px solid var(--accent);
@@ -963,7 +1018,6 @@
       white-space: nowrap;
     }
 
-    /* ===== SUCCESS MESSAGE ===== */
     .success-message {
       display: none;
       text-align: center;
@@ -995,7 +1049,6 @@
       color: #666;
     }
 
-    /* ===== ANIMATIONS ===== */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -1193,7 +1246,6 @@
         gap: 32px;
       }
 
-      /* Mobile Popup Styles */
       .popup-container {
         width: 95%;
         max-height: 85vh;
@@ -1220,6 +1272,11 @@
       
       .email-capture-footer .inline-form button {
         width: 100%;
+      }
+
+      .sensory-callout {
+        flex-direction: column;
+        text-align: center;
       }
     }
     
@@ -1268,19 +1325,25 @@
     </div>
   </div>
 
-  <!-- Breadcrumb -->
+  <!-- Breadcrumb with Schema -->
   <nav aria-label="Breadcrumb" class="breadcrumb">
     <div class="wrap">
       <ol itemscope itemtype="https://schema.org/BreadcrumbList">
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a itemprop="item" href="/">
+          <a itemprop="item" href="https://braveskincare.ca/">
             <span itemprop="name">Home</span>
           </a>
           <meta itemprop="position" content="1" />
         </li>
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <span itemprop="name">Men's Winter Moisturizer</span>
+          <a itemprop="item" href="https://braveskincare.ca/products/">
+            <span itemprop="name">Products</span>
+          </a>
           <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">Men's Winter Moisturizer</span>
+          <meta itemprop="position" content="3" />
         </li>
       </ol>
     </div>
@@ -1291,9 +1354,21 @@
     <div class="wrap hero-grid">
       <div>
         <span class="urgency-badge">🔥 Limited: Only 47 kits left</span>
-        <div class="kicker">Men's Face Moisturizer for Dry Skin</div>
+        <div class="kicker">
+          Men's Face Moisturizer for Dry Skin
+          <span class="geo-location" id="geoTag">📍 Toronto</span>
+        </div>
         <h1>Best Men's Face Moisturizer for Dry Skin</h1>
-        <p class="sub">Dermatologist-tested men's winter moisturizer built for Canadian winters. Clinical actives + local botanicals in refillable packaging.</p>
+        <p class="sub">Dermatologist-tested men's winter moisturizer built for <span id="geoCity">Canadian</span> winters. Clinical actives + local botanicals in refillable packaging.</p>
+        
+        <!-- NEW: Sensory Description Above Fold -->
+        <div class="sensory-callout">
+          <div class="icon">💧</div>
+          <div class="text">
+            <strong>Lightweight Gel-Cream Texture</strong>
+            <span>Absorbs in 60 seconds • No sticky residue • Non-greasy formula</span>
+          </div>
+        </div>
         
         <div class="countdown">
           <div class="countdown-item">
@@ -1318,7 +1393,8 @@
           <span class="badge">Dermatologist Tested</span>
           <span class="badge">Canadian Made</span>
           <span class="badge">Refillable</span>
-          <span class="badge">⭐ 4.8/5</span>
+          <span class="badge">⭐ 4.8/5 (2,847)</span>
+          <span class="badge-guarantee">🛡️ 30-Day Guarantee</span>
         </div>
         <div class="cta-row">
           <a class="btn" href="#bundle" data-track="hero-shop-winter-defense">Shop Winter Defense</a>
@@ -1326,7 +1402,7 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="Gemini_Generated_Image_hbuxwghbuxwghbux.png" alt="Best men's face moisturizer for dry skin - Brave Skincare Winter Moisturizer" loading="eager" width="800" height="1000" />
+        <img src="Gemini_Generated_Image_hbuxwghbuxwghbux.png" alt="Best men's face moisturizer for dry skin - Brave Skincare Winter Moisturizer" width="800" height="1000" fetchpriority="high" />
       </div>
     </div>
   </header>
@@ -1334,7 +1410,7 @@
   <main>
     <!-- Problem Section -->
     <section class="wrap fade-in">
-      <h2>Built for Canadian Winters</h2>
+      <h2>Built for <span id="geoProblem">Canadian</span> Winters</h2>
       <p class="lead">Generic face creams fail in extreme cold. Our men's dry skin cream is formulated specifically for harsh weather and urban pollution.</p>
       <div class="grid-3">
         <div class="card">
@@ -1376,37 +1452,61 @@
       <h2>Your Winter Defense System</h2>
       <p class="lead">Complete men's face moisturizer for dry skin routine. Dermatologist-tested, Canadian-made, refillable.</p>
       <div class="grid-3">
-        <div class="card">
+        <div class="card" itemscope itemtype="https://schema.org/Product">
           <div class="card-image">
-            <img src="Gemini_Generated_Image_qcnrzoqcnrzoqcnr.png" alt="Men's winter moisturizer product" loading="lazy" width="600" height="480" />
+            <img itemprop="image" src="Gemini_Generated_Image_qcnrzoqcnrzoqcnr.png" alt="Men's winter moisturizer product" loading="lazy" width="600" height="480" />
           </div>
           <span class="pill">Hero Product</span>
-          <h3>Winter Moisturizer</h3>
+          <h3 itemprop="name">Winter Moisturizer</h3>
+          <meta itemprop="brand" content="Brave Skincare" />
+          <meta itemprop="sku" content="BRV-MOIST-50" />
           <p class="alt">Men's winter moisturizer • Best face cream for men dry skin</p>
-          <p>Clinical hyaluronic acid for 8-hour hydration. Fast-absorbing, non-greasy. 50ml refillable jar.</p>
-          <p class="price">$45</p>
+          <p itemprop="description">Clinical hyaluronic acid for 8-hour hydration. Fast-absorbing, non-greasy. 50ml refillable jar.</p>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="CAD" />
+            <meta itemprop="price" content="45.00" />
+            <meta itemprop="availability" content="https://schema.org/InStock" />
+            <meta itemprop="url" content="https://braveskincare.ca/products/winter-moisturizer" />
+            <p class="price">$<span itemprop="price">45</span></p>
+          </div>
           <a class="btn add-to-cart-trigger" href="#bundle" data-track="product-moisturizer">Add to cart</a>
         </div>
-        <div class="card">
+        <div class="card" itemscope itemtype="https://schema.org/Product">
           <div class="card-image">
-            <img src="Gemini_Generated_Image_nw6eb7nw6eb7nw6e.png" alt="Barrier repair serum for men" loading="lazy" width="600" height="480" />
+            <img itemprop="image" src="Gemini_Generated_Image_nw6eb7nw6eb7nw6e.png" alt="Barrier repair serum for men" loading="lazy" width="600" height="480" />
           </div>
           <span class="pill">Defense</span>
-          <h3>Barrier Serum</h3>
+          <h3 itemprop="name">Barrier Serum</h3>
+          <meta itemprop="brand" content="Brave Skincare" />
+          <meta itemprop="sku" content="BRV-SERUM-30" />
           <p class="alt">Niacinamide + maple water extract</p>
-          <p>Shields against pollution and supports barrier integrity. Perfect with mens moisturiser for dry skin. 30ml.</p>
-          <p class="price">$38</p>
+          <p itemprop="description">Shields against pollution and supports barrier integrity. Perfect with mens moisturiser for dry skin. 30ml.</p>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="CAD" />
+            <meta itemprop="price" content="38.00" />
+            <meta itemprop="availability" content="https://schema.org/InStock" />
+            <meta itemprop="url" content="https://braveskincare.ca/products/barrier-serum" />
+            <p class="price">$<span itemprop="price">38</span></p>
+          </div>
           <a class="btn add-to-cart-trigger" href="#bundle" data-track="product-serum">Add to cart</a>
         </div>
-        <div class="card">
+        <div class="card" itemscope itemtype="https://schema.org/Product">
           <div class="card-image">
-            <img src="Gemini_Generated_Image_jbd3y3jbd3y3jbd3.png" alt="Gentle hydrating cleanser for men's dry skin" loading="lazy" width="600" height="480" />
+            <img itemprop="image" src="Gemini_Generated_Image_jbd3y3jbd3y3jbd3.png" alt="Gentle hydrating cleanser for men's dry skin" loading="lazy" width="600" height="480" />
           </div>
           <span class="pill">Essential</span>
-          <h3>Hydrating Cleanser</h3>
+          <h3 itemprop="name">Hydrating Cleanser</h3>
+          <meta itemprop="brand" content="Brave Skincare" />
+          <meta itemprop="sku" content="BRV-CLEAN-150" />
           <p class="alt">Soap-free, pH-balanced formula</p>
-          <p>Cleans without stripping natural oils. First step for best men's face moisturizer for dry skin routine. 150ml.</p>
-          <p class="price">$28</p>
+          <p itemprop="description">Cleans without stripping natural oils. First step for best men's face moisturizer for dry skin routine. 150ml.</p>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="CAD" />
+            <meta itemprop="price" content="28.00" />
+            <meta itemprop="availability" content="https://schema.org/InStock" />
+            <meta itemprop="url" content="https://braveskincare.ca/products/hydrating-cleanser" />
+            <p class="price">$<span itemprop="price">28</span></p>
+          </div>
           <a class="btn add-to-cart-trigger" href="#bundle" data-track="product-cleanser">Add to cart</a>
         </div>
       </div>
@@ -1416,7 +1516,7 @@
     <section class="wrap fade-in">
       <div class="refill-enrollment-banner">
         <span class="savings-badge">Save 15% Forever</span>
-        <h3>Join 1,200+ Men on Our Refill Program</h3>
+        <h3>Join 1,200+ <span id="geoRefill">Canadian</span> Men on Our Refill Program</h3>
         <p>Never run out during a cold snap. Get eco-friendly refills delivered on your schedule + save 15% on every order.</p>
         
         <div class="refill-features">
@@ -1437,10 +1537,28 @@
     </section>
 
     <!-- Bundle -->
-    <section class="wrap fade-in" id="bundle">
+    <section class="wrap fade-in" id="bundle" itemscope itemtype="https://schema.org/Product">
       <div class="bundle-section">
-        <h2>Winter Defense Kit — Save $45 Today</h2>
-        <p class="lead">Complete 3-step system. The best men's face moisturizer for dry skin, barrier serum, and gentle cleanser. Free shipping over $75.</p>
+        <h2 itemprop="name">Winter Defense Kit — Save $45 Today</h2>
+        <meta itemprop="brand" content="Brave Skincare" />
+        <meta itemprop="sku" content="BRV-KIT-WINTER" />
+        <meta itemprop="image" content="https://braveskincare.ca/images/winter-defense-kit.jpg" />
+        <p class="lead" itemprop="description">Complete 3-step system. The best men's face moisturizer for dry skin, barrier serum, and gentle cleanser. Free shipping over $75.</p>
+        
+        <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <meta itemprop="priceCurrency" content="CAD" />
+          <meta itemprop="price" content="96.00" />
+          <meta itemprop="availability" content="https://schema.org/InStock" />
+          <meta itemprop="url" content="https://braveskincare.ca/products/winter-defense-kit" />
+        </div>
+        
+        <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+          <meta itemprop="ratingValue" content="4.8" />
+          <meta itemprop="reviewCount" content="2847" />
+          <meta itemprop="bestRating" content="5" />
+          <meta itemprop="worstRating" content="1" />
+        </div>
+        
         <div class="grid-2">
           <div class="card">
             <h3 style="margin-top: 0;">What's Included</h3>
@@ -1470,7 +1588,7 @@
             <div style="background: var(--card); padding: 24px; border-radius: 16px; border: 1px solid var(--line);">
               <h3 style="margin: 0 0 12px; font-size: 20px; color: var(--accent);">Save $45 Today</h3>
               <p style="color: var(--muted); margin: 0;">Regular $111 • Now $96 CAD</p>
-              <p style="color: var(--accent-dark); margin: 12px 0 0; font-weight: 600;">✓ Free shipping • ✓ Ships from Canada</p>
+              <p style="color: var(--accent-dark); margin: 12px 0 0; font-weight: 600;">✓ Free shipping • ✓ Ships from <span id="geoShipping">Canada</span></p>
             </div>
           </div>
         </div>
@@ -1482,16 +1600,23 @@
       <div class="feature-image">
         <img src="Gemini_Generated_Image_96jkh296jkh296jk.png" alt="Men using best men's moisturiser for dry skin" loading="lazy" width="1400" height="600" />
       </div>
-      <div style="text-align: center; margin-top: 32px;">
-        <p style="font-size: 18px; color: var(--muted); font-style: italic; max-width: 680px; margin: 0 auto;">
-          "Finally found the best men's face moisturizer for dry skin that works in Toronto winters. My skin went from cracked to comfortable in days."
+      <div style="text-align: center; margin-top: 32px;" itemscope itemtype="https://schema.org/Review">
+        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+          <meta itemprop="ratingValue" content="5" />
+          <meta itemprop="bestRating" content="5" />
+        </div>
+        <meta itemprop="datePublished" content="2025-01-15" />
+        <p style="font-size: 18px; color: var(--muted); font-style: italic; max-width: 680px; margin: 0 auto;" itemprop="reviewBody">
+          "Finally found the best men's face moisturizer for dry skin that works in <span id="geoTestimonial">Toronto</span> winters. My skin went from cracked to comfortable in days."
         </p>
-        <p style="margin-top: 12px; color: var(--accent-dark); font-weight: 600;">— Jordan, Toronto</p>
+        <p style="margin-top: 12px; color: var(--accent-dark); font-weight: 600;">
+          — <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Jordan</span></span>, <span id="geoTestimonialCity">Toronto</span>
+        </p>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="wrap fade-in" id="faq">
+    <section class="wrap fade-in" id="faq" itemscope itemtype="https://schema.org/FAQPage">
       <h2>Frequently Asked Questions</h2>
       <p class="lead">Common questions about the best men's face moisturizer for dry skin.</p>
       
@@ -1541,7 +1666,7 @@
     <!-- Email Capture Footer -->
     <section class="email-capture-footer">
       <h3>Winter Skincare Tips + Exclusive Offers</h3>
-      <p>Join 3,500+ Canadian men getting expert tips for harsh weather protection</p>
+      <p>Join 3,500+ <span id="geoFooter">Canadian</span> men getting expert tips for harsh weather protection</p>
       
       <form class="inline-form" onsubmit="submitFooterEmail(event)">
         <input type="email" id="footerEmail" placeholder="Enter your email" required>
@@ -1566,13 +1691,25 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
+  <!-- Footer with Organization Schema -->
+  <footer itemscope itemtype="https://schema.org/Organization">
     <div class="wrap">
+      <meta itemprop="name" content="Brave Skincare" />
+      <meta itemprop="url" content="https://braveskincare.ca" />
+      <meta itemprop="logo" content="https://braveskincare.ca/logo.png" />
+      <link itemprop="sameAs" href="https://www.instagram.com/braveskincarecanada" />
+      <link itemprop="sameAs" href="https://www.linkedin.com/company/brave-skincare-canada" />
+      
       <div class="grid-3">
         <div>
           <strong style="font-size: 16px; color: var(--text);">Brave Skincare</strong>
-          <p class="alt" style="margin-top: 12px;">Made in Toronto, Ontario<br>hello@braveskincare.ca<br>1-800-BRAVE-CA</p>
+          <p class="alt" style="margin-top: 12px;">
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <span itemprop="addressLocality">Made in Toronto</span>, <span itemprop="addressRegion">Ontario</span>
+            </span><br>
+            <span itemprop="email">hello@braveskincare.ca</span><br>
+            <span itemprop="telephone">1-800-BRAVE-CA</span>
+          </p>
         </div>
         <div>
           <strong style="font-size: 16px; color: var(--text);">Trust</strong>
@@ -1589,17 +1726,13 @@
     </div>
   </footer>
 
-  <!-- ============================================ -->
-  <!-- POPUP HTML STRUCTURES                       -->
-  <!-- ============================================ -->
-
-  <!-- Welcome Popup (Entry Intent - 5s delay) -->
+  <!-- POPUPS (same as before) -->
   <div id="welcomePopup" class="popup-overlay">
     <div class="popup-container">
       <button class="close-popup" onclick="closePopup('welcomePopup')">&times;</button>
       <div class="welcome-popup-content">
         <h2>Save $45 on Your Winter Defense Kit</h2>
-        <p class="subheading">Plus get exclusive tips for Canadian winter skincare</p>
+        <p class="subheading">Plus get exclusive tips for <span id="geoPopupWelcome">Canadian</span> winter skincare</p>
         
         <ul class="benefit-list">
           <li>15% off your first order when you join</li>
@@ -1630,7 +1763,6 @@
     </div>
   </div>
 
-  <!-- Exit Intent Popup -->
   <div id="exitPopup" class="popup-overlay">
     <div class="popup-container">
       <button class="close-popup" onclick="closePopup('exitPopup')">&times;</button>
@@ -1644,7 +1776,7 @@
         </div>
         
         <p style="font-size: 15px; color: #333; margin-bottom: 20px;">
-          Join 2,847+ Canadian men who solved winter dryness. Get instant access to:
+          Join 2,847+ <span id="geoPopupExit">Canadian</span> men who solved winter dryness. Get instant access to:
         </p>
         
         <ul class="benefit-list" style="text-align: left;">
@@ -1675,7 +1807,6 @@
     </div>
   </div>
 
-  <!-- Refill Program Enrollment Popup (Cart Addition) -->
   <div id="refillPopup" class="popup-overlay">
     <div class="popup-container">
       <button class="close-popup" onclick="closePopup('refillPopup')">&times;</button>
@@ -1732,7 +1863,6 @@
     </div>
   </div>
 
-  <!-- Success Message -->
   <div id="successPopup" class="popup-overlay">
     <div class="popup-container">
       <button class="close-popup" onclick="closePopup('successPopup')">&times;</button>
@@ -1747,84 +1877,147 @@
     </div>
   </div>
 
-  <!-- Schema Markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "name": "Brave Skincare",
-        "url": "https://braveskincare.ca",
-        "logo": "https://braveskincare.ca/logo.png",
-        "sameAs": [
-          "https://www.instagram.com/braveskincarecanada",
-          "https://www.linkedin.com/company/brave-skincare-canada"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+1-800-272-8322",
-          "contactType": "Customer Service",
-          "areaServed": "CA",
-          "availableLanguage": ["en", "fr"]
-        }
-      },
-      {
-        "@type": "Product",
-        "name": "Men's Winter Face Moisturizer",
-        "brand": {"@type": "Brand", "name": "Brave Skincare"},
-        "description": "Best men's face moisturizer for dry skin. Dermatologist-tested for Canadian winters.",
-        "image": "https://braveskincare.ca/Gemini_Generated_Image_hbuxwghbuxwghbux.png",
-        "sku": "BRV-WIN-50",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "CAD",
-          "price": "45.00",
-          "availability": "https://schema.org/InStock"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "2847"
-        },
-        "review": {
-          "@type": "Review",
-          "author": {"@type": "Person", "name": "Jordan"},
-          "datePublished": "2025-01-15",
-          "reviewBody": "Finally found the best men's face moisturizer for dry skin that works in Toronto winters.",
-          "reviewRating": {"@type": "Rating", "ratingValue": "5"}
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How is this different from regular men's face cream?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Formulated and tested for -30°C Canadian winters; generic creams freeze or lose potency."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is this the best men's face moisturizer for dry skin and sensitive skin?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Dermatologist-tested, hypoallergenic, and free from harsh fragrance, sulfates, and parabens."
-            }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
-
   <!-- JavaScript -->
   <script>
+    // ===== GEO-TARGETING DYNAMIC CONTENT =====
+    const geoContent = {
+      'Toronto': {
+        kicker: 'Toronto',
+        city: 'Toronto',
+        problem: 'Toronto',
+        refill: 'Toronto',
+        shipping: 'Toronto',
+        testimonial: 'Toronto',
+        testimonialCity: 'Toronto',
+        footer: 'Toronto',
+        popupWelcome: 'Toronto',
+        popupExit: 'Toronto'
+      },
+      'Montreal': {
+        kicker: 'Montreal',
+        city: 'Montreal',
+        problem: 'Montreal',
+        refill: 'Montreal',
+        shipping: 'Montreal',
+        testimonial: 'Montreal',
+        testimonialCity: 'Montreal',
+        footer: 'Montreal',
+        popupWelcome: 'Montreal',
+        popupExit: 'Montreal'
+      },
+      'Vancouver': {
+        kicker: 'Vancouver',
+        city: 'Vancouver',
+        problem: 'Vancouver',
+        refill: 'Vancouver',
+        shipping: 'Vancouver',
+        testimonial: 'Vancouver',
+        testimonialCity: 'Vancouver',
+        footer: 'Vancouver',
+        popupWelcome: 'Vancouver',
+        popupExit: 'Vancouver'
+      },
+      'Calgary': {
+        kicker: 'Calgary',
+        city: 'Calgary',
+        problem: 'Calgary',
+        refill: 'Calgary',
+        shipping: 'Calgary',
+        testimonial: 'Calgary',
+        testimonialCity: 'Calgary',
+        footer: 'Calgary',
+        popupWelcome: 'Calgary',
+        popupExit: 'Calgary'
+      },
+      'Ottawa': {
+        kicker: 'Ottawa',
+        city: 'Ottawa',
+        problem: 'Ottawa',
+        refill: 'Ottawa',
+        shipping: 'Ottawa',
+        testimonial: 'Ottawa',
+        testimonialCity: 'Ottawa',
+        footer: 'Ottawa',
+        popupWelcome: 'Ottawa',
+        popupExit: 'Ottawa'
+      },
+      'default': {
+        kicker: 'Canada',
+        city: 'Canadian',
+        problem: 'Canadian',
+        refill: 'Canadian',
+        shipping: 'Canada',
+        testimonial: 'Toronto',
+        testimonialCity: 'Toronto',
+        footer: 'Canadian',
+        popupWelcome: 'Canadian',
+        popupExit: 'Canadian'
+      }
+    };
+
+    function applyGeoContent(location) {
+      const content = geoContent[location] || geoContent['default'];
+      
+      // Update all geo-specific elements
+      const geoElements = {
+        'geoTag': `📍 ${content.kicker}`,
+        'geoCity': content.city,
+        'geoProblem': content.problem,
+        'geoRefill': content.refill,
+        'geoShipping': content.shipping,
+        'geoTestimonial': content.testimonial,
+        'geoTestimonialCity': content.testimonialCity,
+        'geoFooter': content.footer,
+        'geoPopupWelcome': content.popupWelcome,
+        'geoPopupExit': content.popupExit
+      };
+      
+      Object.keys(geoElements).forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.textContent = geoElements[id];
+        }
+      });
+    }
+
+    // Simple geolocation detection (can be replaced with IP-based service)
+    function detectLocation() {
+      // Check URL parameter first (for PPC campaigns)
+      const urlParams = new URLSearchParams(window.location.search);
+      const cityParam = urlParams.get('city');
+      
+      if (cityParam && geoContent[cityParam]) {
+        applyGeoContent(cityParam);
+        localStorage.setItem('userCity', cityParam);
+        return;
+      }
+      
+      // Check localStorage
+      const savedCity = localStorage.getItem('userCity');
+      if (savedCity && geoContent[savedCity]) {
+        applyGeoContent(savedCity);
+        return;
+      }
+      
+      // Default to Canada-wide
+      applyGeoContent('default');
+      
+      // Optional: Use IP geolocation API
+      // fetch('https://ipapi.co/json/')
+      //   .then(res => res.json())
+      //   .then(data => {
+      //     if (data.city && geoContent[data.city]) {
+      //       applyGeoContent(data.city);
+      //       localStorage.setItem('userCity', data.city);
+      //     }
+      //   });
+    }
+
+    detectLocation();
+
     // ===== COUNTDOWN TIMER =====
     function initCountdown() {
-      const COUNTDOWN_DURATION = 4; // days
+      const COUNTDOWN_DURATION = 4;
       
       function getEndDate() {
         const end = new Date();
@@ -1924,7 +2117,6 @@
       });
     });
 
-    // ===== WELCOME POPUP (5 seconds) =====
     setTimeout(function() {
       if (!hasSeenPopup('welcome') && !popupStates.welcomeShown) {
         openPopup('welcomePopup');
@@ -1939,7 +2131,6 @@
       }
     }, 5000);
 
-    // ===== EXIT INTENT POPUP =====
     let exitIntentTriggered = false;
 
     document.addEventListener('mouseleave', function(e) {
@@ -1957,7 +2148,6 @@
       }
     });
 
-    // ===== REFILL POPUP (Add to Cart) =====
     function triggerRefillPopup() {
       if (!hasSeenPopup('refill') && !popupStates.refillShown) {
         setTimeout(function() {
@@ -1974,7 +2164,6 @@
       }
     }
 
-    // Hook into Add to Cart buttons
     document.querySelectorAll('.add-to-cart-trigger').forEach(btn => {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
@@ -1994,6 +2183,7 @@
         source: 'welcome_popup',
         discount_code: 'WINTER15',
         refill_interest: refillInterest,
+        city: localStorage.getItem('userCity') || 'unknown',
         timestamp: new Date().toISOString()
       });
       
@@ -2020,6 +2210,7 @@
         email: email,
         source: 'exit_intent_popup',
         discount_code: 'WINTER20',
+        city: localStorage.getItem('userCity') || 'unknown',
         timestamp: new Date().toISOString()
       });
       
@@ -2049,6 +2240,7 @@
         refill_frequency: frequency,
         refill_enrolled: true,
         discount_code: 'REFILL15',
+        city: localStorage.getItem('userCity') || 'unknown',
         timestamp: new Date().toISOString()
       });
       
@@ -2075,6 +2267,7 @@
       submitToEmailService({
         email: email,
         source: 'footer_newsletter',
+        city: localStorage.getItem('userCity') || 'unknown',
         timestamp: new Date().toISOString()
       });
       
@@ -2088,30 +2281,11 @@
       form.innerHTML = '<p style="color: #28a745; font-size: 16px; font-weight: 600;">✓ You\'re subscribed! Check your email.</p>';
     }
 
-    // ===== EMAIL SERVICE INTEGRATION =====
     function submitToEmailService(data) {
       console.log('Submitting to email service:', data);
       
       // REPLACE WITH YOUR EMAIL SERVICE PROVIDER INTEGRATION
       // Examples: Klaviyo, Mailchimp, ConvertKit, etc.
-      
-      // Klaviyo example:
-      /*
-      fetch('https://a.klaviyo.com/api/identify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          token: 'YOUR_PUBLIC_API_KEY',
-          properties: {
-            email: data.email,
-            $source: data.source,
-            discount_code: data.discount_code,
-            refill_interest: data.refill_interest,
-            refill_frequency: data.refill_frequency
-          }
-        })
-      });
-      */
     }
     
     // ===== TRACKING =====
@@ -2157,7 +2331,8 @@
     document.querySelectorAll('a[href="#checkout"]').forEach(btn => {
       btn.addEventListener('click', e => {
         e.preventDefault();
-        alert('✅ Winter Defense Kit added!\n\n💰 $96 CAD (Save $45)\n🚚 Free shipping\n⭐ Best men\'s face moisturizer for dry skin\n🔥 Only 47 kits left!\n\nRedirecting to checkout...');
+        const city = localStorage.getItem('userCity') || 'Canada';
+        alert(`✅ Winter Defense Kit added!\n\n💰 $96 CAD (Save $45)\n🚚 Free shipping to ${city}\n⭐ Best men's face moisturizer for dry skin\n🔥 Only 47 kits left!\n\nRedirecting to checkout...`);
         track('Checkout', 'initiate', 'winter-defense-kit');
       });
     });
