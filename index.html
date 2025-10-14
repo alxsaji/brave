@@ -576,6 +576,441 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* ===== POPUP SYSTEM STYLES ===== */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 9998;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .popup-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 520px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      z-index: 9999;
+      animation: slideUp 0.4s ease-out;
+    }
+
+    /* ===== WELCOME POPUP ===== */
+    .welcome-popup-content {
+      padding: 40px 32px;
+      text-align: center;
+    }
+
+    .welcome-popup-content h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .welcome-popup-content .subheading {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 24px;
+    }
+
+    .welcome-popup-content .benefit-list {
+      text-align: left;
+      margin: 24px 0;
+      padding: 0;
+    }
+
+    .welcome-popup-content .benefit-list li {
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+      list-style: none;
+    }
+
+    .welcome-popup-content .benefit-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    /* ===== EXIT INTENT POPUP ===== */
+    .exit-popup-content {
+      padding: 40px 32px;
+      text-align: center;
+    }
+
+    .exit-popup-content h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .exit-popup-content .urgency-text {
+      font-size: 18px;
+      color: #d9534f;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .exit-popup-content .offer-highlight {
+      background: var(--accent-light);
+      border: 2px dashed var(--accent);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 24px 0;
+    }
+
+    .exit-popup-content .offer-highlight .discount-text {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .exit-popup-content .offer-highlight .discount-subtitle {
+      font-size: 16px;
+      color: #333;
+      font-weight: 600;
+    }
+
+    /* ===== REFILL ENROLLMENT POPUP ===== */
+    .refill-popup-content {
+      padding: 40px 32px;
+    }
+
+    .refill-popup-content h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .refill-popup-content .savings-callout {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: white;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .refill-popup-content .savings-callout .big-number {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .refill-popup-content .refill-benefits {
+      margin: 24px 0;
+      padding: 0;
+    }
+
+    .refill-popup-content .refill-benefits li {
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 14px;
+      padding-left: 32px;
+      position: relative;
+      list-style: none;
+    }
+
+    .refill-popup-content .refill-benefits li:before {
+      content: "♻";
+      position: absolute;
+      left: 0;
+      font-size: 20px;
+    }
+
+    /* ===== FORM STYLES ===== */
+    .popup-form {
+      margin-top: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 15px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      transition: border-color 0.2s;
+      font-family: inherit;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .form-checkbox {
+      display: flex;
+      align-items: flex-start;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .form-checkbox input[type="checkbox"] {
+      margin-right: 10px;
+      margin-top: 4px;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .form-checkbox label {
+      font-size: 13px;
+      color: #666;
+      cursor: pointer;
+      line-height: 1.5;
+    }
+
+    /* ===== BUTTON STYLES ===== */
+    .popup-btn-primary {
+      width: 100%;
+      padding: 16px 24px;
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .popup-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px var(--shadow-lg);
+    }
+
+    .popup-btn-secondary {
+      display: block;
+      width: 100%;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #666;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      margin-top: 12px;
+      text-decoration: underline;
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      background: #f5f5f5;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      color: #666;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .close-popup:hover {
+      background: #e0e0e0;
+    }
+
+    /* ===== INLINE CTA SECTIONS ===== */
+    .refill-enrollment-banner {
+      background: linear-gradient(135deg, var(--accent-light) 0%, #dff2e8 100%);
+      border: 2px solid var(--accent);
+      border-radius: 12px;
+      padding: 32px;
+      margin: 48px 0;
+      text-align: center;
+    }
+
+    .refill-enrollment-banner h3 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .refill-enrollment-banner .savings-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 24px;
+      margin-bottom: 16px;
+    }
+
+    .refill-enrollment-banner p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .refill-enrollment-banner .refill-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+      text-align: left;
+    }
+
+    .refill-enrollment-banner .feature-item {
+      display: flex;
+      align-items: flex-start;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .refill-enrollment-banner .feature-item:before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 20px;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+
+    .email-capture-footer {
+      background: #1a1a1a;
+      color: white;
+      padding: 48px 24px;
+      text-align: center;
+      margin-top: 64px;
+    }
+
+    .email-capture-footer h3 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .email-capture-footer p {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 24px;
+    }
+
+    .email-capture-footer .inline-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      gap: 12px;
+    }
+
+    .email-capture-footer .inline-form input {
+      flex: 1;
+      padding: 14px 18px;
+      font-size: 15px;
+      border: 2px solid #444;
+      border-radius: 6px;
+      background: #2a2a2a;
+      color: white;
+    }
+
+    .email-capture-footer .inline-form button {
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 700;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    /* ===== SUCCESS MESSAGE ===== */
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 32px;
+    }
+
+    .success-message .checkmark {
+      width: 64px;
+      height: 64px;
+      background: #28a745;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 36px;
+      color: white;
+    }
+
+    .success-message h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .success-message p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
     
     /* Mobile Optimizations */
     @media (max-width: 880px) {
@@ -757,6 +1192,35 @@
       footer .grid-3 {
         gap: 32px;
       }
+
+      /* Mobile Popup Styles */
+      .popup-container {
+        width: 95%;
+        max-height: 85vh;
+      }
+      
+      .welcome-popup-content,
+      .exit-popup-content,
+      .refill-popup-content {
+        padding: 28px 20px;
+      }
+      
+      .welcome-popup-content h2,
+      .exit-popup-content h2 {
+        font-size: 24px;
+      }
+      
+      .refill-enrollment-banner {
+        padding: 24px 20px;
+      }
+      
+      .email-capture-footer .inline-form {
+        flex-direction: column;
+      }
+      
+      .email-capture-footer .inline-form button {
+        width: 100%;
+      }
     }
     
     @media (max-width: 480px) {
@@ -921,7 +1385,7 @@
           <p class="alt">Men's winter moisturizer • Best face cream for men dry skin</p>
           <p>Clinical hyaluronic acid for 8-hour hydration. Fast-absorbing, non-greasy. 50ml refillable jar.</p>
           <p class="price">$45</p>
-          <a class="btn" href="#bundle" data-track="product-moisturizer">Add to cart</a>
+          <a class="btn add-to-cart-trigger" href="#bundle" data-track="product-moisturizer">Add to cart</a>
         </div>
         <div class="card">
           <div class="card-image">
@@ -932,7 +1396,7 @@
           <p class="alt">Niacinamide + maple water extract</p>
           <p>Shields against pollution and supports barrier integrity. Perfect with mens moisturiser for dry skin. 30ml.</p>
           <p class="price">$38</p>
-          <a class="btn" href="#bundle" data-track="product-serum">Add to cart</a>
+          <a class="btn add-to-cart-trigger" href="#bundle" data-track="product-serum">Add to cart</a>
         </div>
         <div class="card">
           <div class="card-image">
@@ -943,8 +1407,32 @@
           <p class="alt">Soap-free, pH-balanced formula</p>
           <p>Cleans without stripping natural oils. First step for best men's face moisturizer for dry skin routine. 150ml.</p>
           <p class="price">$28</p>
-          <a class="btn" href="#bundle" data-track="product-cleanser">Add to cart</a>
+          <a class="btn add-to-cart-trigger" href="#bundle" data-track="product-cleanser">Add to cart</a>
         </div>
+      </div>
+    </section>
+
+    <!-- Refill Enrollment Banner -->
+    <section class="wrap fade-in">
+      <div class="refill-enrollment-banner">
+        <span class="savings-badge">Save 15% Forever</span>
+        <h3>Join 1,200+ Men on Our Refill Program</h3>
+        <p>Never run out during a cold snap. Get eco-friendly refills delivered on your schedule + save 15% on every order.</p>
+        
+        <div class="refill-features">
+          <div class="feature-item">Flexible 4-10 week schedules</div>
+          <div class="feature-item">Skip, pause, or cancel anytime</div>
+          <div class="feature-item">60% less packaging waste</div>
+          <div class="feature-item">Priority shipping included</div>
+        </div>
+        
+        <button class="popup-btn-primary" onclick="openPopup('refillPopup')" style="max-width: 320px; margin: 20px auto 0;">
+          Enroll in Refill Program
+        </button>
+        
+        <p style="font-size: 14px; color: #666; margin-top: 16px;">
+          Average savings: <strong>$127/year</strong> based on 8-week refills
+        </p>
       </div>
     </section>
 
@@ -1050,6 +1538,21 @@
       </div>
     </section>
 
+    <!-- Email Capture Footer -->
+    <section class="email-capture-footer">
+      <h3>Winter Skincare Tips + Exclusive Offers</h3>
+      <p>Join 3,500+ Canadian men getting expert tips for harsh weather protection</p>
+      
+      <form class="inline-form" onsubmit="submitFooterEmail(event)">
+        <input type="email" id="footerEmail" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      
+      <p style="font-size: 13px; color: #999; margin-top: 16px;">
+        ✓ Unsubscribe anytime  ✓ No spam, ever  ✓ 1-2 emails per month
+      </p>
+    </section>
+
     <!-- Final CTA -->
     <section class="wrap fade-in" style="text-align: center; padding: 80px 0;">
       <h2>Shop Winter Defense Today</h2>
@@ -1085,6 +1588,164 @@
       </div>
     </div>
   </footer>
+
+  <!-- ============================================ -->
+  <!-- POPUP HTML STRUCTURES                       -->
+  <!-- ============================================ -->
+
+  <!-- Welcome Popup (Entry Intent - 5s delay) -->
+  <div id="welcomePopup" class="popup-overlay">
+    <div class="popup-container">
+      <button class="close-popup" onclick="closePopup('welcomePopup')">&times;</button>
+      <div class="welcome-popup-content">
+        <h2>Save $45 on Your Winter Defense Kit</h2>
+        <p class="subheading">Plus get exclusive tips for Canadian winter skincare</p>
+        
+        <ul class="benefit-list">
+          <li>15% off your first order when you join</li>
+          <li>Early access to refill program (save 15% forever)</li>
+          <li>Free shipping on orders $75+</li>
+          <li>Expert winter skincare tips & routines</li>
+        </ul>
+        
+        <form class="popup-form" onsubmit="submitWelcomeForm(event)">
+          <div class="form-group">
+            <input type="email" id="welcomeEmail" placeholder="Enter your email" required>
+          </div>
+          
+          <div class="form-checkbox">
+            <input type="checkbox" id="welcomeRefill" name="refillInterest">
+            <label for="welcomeRefill">I'm interested in the refill program (save 15% on every order)</label>
+          </div>
+          
+          <button type="submit" class="popup-btn-primary">
+            Claim Your Discount
+          </button>
+          
+          <button type="button" class="popup-btn-secondary" onclick="closePopup('welcomePopup')">
+            No thanks, I'll pay full price
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Exit Intent Popup -->
+  <div id="exitPopup" class="popup-overlay">
+    <div class="popup-container">
+      <button class="close-popup" onclick="closePopup('exitPopup')">&times;</button>
+      <div class="exit-popup-content">
+        <h2>Wait! Don't Face Winter Unprepared</h2>
+        <p class="urgency-text">Last chance for -30°C protection</p>
+        
+        <div class="offer-highlight">
+          <div class="discount-text">20% OFF</div>
+          <div class="discount-subtitle">Your First Order + Free Refill Enrollment</div>
+        </div>
+        
+        <p style="font-size: 15px; color: #333; margin-bottom: 20px;">
+          Join 2,847+ Canadian men who solved winter dryness. Get instant access to:
+        </p>
+        
+        <ul class="benefit-list" style="text-align: left;">
+          <li>20% off Winter Defense Kit (normally $96, now $76.80)</li>
+          <li>Free refill program enrollment (15% off forever)</li>
+          <li>30-day money-back guarantee</li>
+          <li>Ships in 2-3 business days</li>
+        </ul>
+        
+        <form class="popup-form" onsubmit="submitExitForm(event)">
+          <div class="form-group">
+            <input type="email" id="exitEmail" placeholder="Enter your email for 20% off" required>
+          </div>
+          
+          <button type="submit" class="popup-btn-primary">
+            Send Me 20% Off Code
+          </button>
+          
+          <button type="button" class="popup-btn-secondary" onclick="closePopup('exitPopup')">
+            No thanks, I'll continue to browse
+          </button>
+        </form>
+        
+        <p style="font-size: 12px; color: #999; margin-top: 16px;">
+          Offer expires in 24 hours. One-time use per customer.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Refill Program Enrollment Popup (Cart Addition) -->
+  <div id="refillPopup" class="popup-overlay">
+    <div class="popup-container">
+      <button class="close-popup" onclick="closePopup('refillPopup')">&times;</button>
+      <div class="refill-popup-content">
+        <h2>🎉 Want to Save 15% Forever?</h2>
+        
+        <div class="savings-callout">
+          <div class="big-number">Save 15%</div>
+          <div>On every future order with our Refill Program</div>
+        </div>
+        
+        <p style="font-size: 16px; color: #333; margin-bottom: 20px; text-align: center;">
+          Most men reorder every 8-10 weeks. Join our refill program and never run out:
+        </p>
+        
+        <ul class="refill-benefits">
+          <li><strong>Save 15% forever</strong> on every refill order</li>
+          <li><strong>Flexible schedule</strong> — choose 4, 6, 8, or 10 weeks</li>
+          <li><strong>Eco-friendly pouches</strong> reduce waste by 60%</li>
+          <li><strong>Skip, pause, or cancel</strong> anytime with one click</li>
+          <li><strong>Priority shipping</strong> on all refill orders</li>
+        </ul>
+        
+        <form class="popup-form" onsubmit="submitRefillForm(event)">
+          <div class="form-group">
+            <label for="refillEmail">Email Address</label>
+            <input type="email" id="refillEmail" placeholder="your@email.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="refillFrequency">Refill Frequency</label>
+            <select id="refillFrequency" required>
+              <option value="">Choose your schedule</option>
+              <option value="4">Every 4 weeks</option>
+              <option value="6">Every 6 weeks</option>
+              <option value="8">Every 8 weeks (most popular)</option>
+              <option value="10">Every 10 weeks</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="popup-btn-primary">
+            Enroll & Save 15% Now
+          </button>
+          
+          <button type="button" class="popup-btn-secondary" onclick="closePopup('refillPopup')">
+            No thanks, continue shopping
+          </button>
+        </form>
+        
+        <p style="font-size: 13px; color: #666; margin-top: 16px; text-align: center;">
+          💡 <strong>Smart tip:</strong> 87% of refill members say they save time and never run out during cold snaps.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Message -->
+  <div id="successPopup" class="popup-overlay">
+    <div class="popup-container">
+      <button class="close-popup" onclick="closePopup('successPopup')">&times;</button>
+      <div class="success-message" style="display: block;">
+        <div class="checkmark">✓</div>
+        <h3>You're All Set!</h3>
+        <p id="successMessage">Check your email for your discount code.</p>
+        <button class="popup-btn-primary" onclick="closePopup('successPopup')" style="margin-top: 24px; max-width: 200px; margin-left: auto; margin-right: auto;">
+          Continue Shopping
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Schema Markup -->
   <script type="application/ld+json">
@@ -1161,7 +1822,7 @@
 
   <!-- JavaScript -->
   <script>
-    // Auto-Resetting Countdown Timer
+    // ===== COUNTDOWN TIMER =====
     function initCountdown() {
       const COUNTDOWN_DURATION = 4; // days
       
@@ -1178,7 +1839,6 @@
         const now = new Date().getTime();
         let distance = endDate - now;
         
-        // Auto-reset when countdown reaches zero
         if (distance < 0) {
           endDate = getEndDate();
           distance = endDate - now;
@@ -1201,7 +1861,7 @@
     
     initCountdown();
     
-    // Mobile Menu Toggle
+    // ===== MOBILE MENU =====
     const menuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     
@@ -1214,8 +1874,247 @@
         navLinks.classList.remove('active');
       });
     });
+
+    // ===== POPUP MANAGEMENT =====
+    let popupStates = {
+      welcomeShown: false,
+      exitShown: false,
+      refillShown: false
+    };
+
+    function hasSeenPopup(popupName) {
+      const seen = localStorage.getItem(`popup_${popupName}`);
+      const timestamp = localStorage.getItem(`popup_${popupName}_time`);
+      
+      if (!seen) return false;
+      
+      const sevenDaysAgo = Date.now() - (7 * 24 * 60 * 60 * 1000);
+      if (timestamp && parseInt(timestamp) < sevenDaysAgo) {
+        localStorage.removeItem(`popup_${popupName}`);
+        localStorage.removeItem(`popup_${popupName}_time`);
+        return false;
+      }
+      
+      return true;
+    }
+
+    function markPopupSeen(popupName) {
+      localStorage.setItem(`popup_${popupName}`, 'true');
+      localStorage.setItem(`popup_${popupName}_time`, Date.now().toString());
+    }
+
+    function openPopup(popupId) {
+      document.getElementById(popupId).style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePopup(popupId) {
+      document.getElementById(popupId).style.display = 'none';
+      document.body.style.overflow = 'auto';
+      
+      const popupName = popupId.replace('Popup', '');
+      markPopupSeen(popupName);
+    }
+
+    document.querySelectorAll('.popup-overlay').forEach(overlay => {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === this) {
+          closePopup(this.id);
+        }
+      });
+    });
+
+    // ===== WELCOME POPUP (5 seconds) =====
+    setTimeout(function() {
+      if (!hasSeenPopup('welcome') && !popupStates.welcomeShown) {
+        openPopup('welcomePopup');
+        popupStates.welcomeShown = true;
+        
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'popup_shown', {
+            popup_type: 'welcome',
+            popup_trigger: 'time_delay'
+          });
+        }
+      }
+    }, 5000);
+
+    // ===== EXIT INTENT POPUP =====
+    let exitIntentTriggered = false;
+
+    document.addEventListener('mouseleave', function(e) {
+      if (e.clientY < 10 && !exitIntentTriggered && !hasSeenPopup('exit') && !popupStates.exitShown) {
+        openPopup('exitPopup');
+        popupStates.exitShown = true;
+        exitIntentTriggered = true;
+        
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'popup_shown', {
+            popup_type: 'exit_intent',
+            popup_trigger: 'mouse_leave'
+          });
+        }
+      }
+    });
+
+    // ===== REFILL POPUP (Add to Cart) =====
+    function triggerRefillPopup() {
+      if (!hasSeenPopup('refill') && !popupStates.refillShown) {
+        setTimeout(function() {
+          openPopup('refillPopup');
+          popupStates.refillShown = true;
+          
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'popup_shown', {
+              popup_type: 'refill_enrollment',
+              popup_trigger: 'add_to_cart'
+            });
+          }
+        }, 1500);
+      }
+    }
+
+    // Hook into Add to Cart buttons
+    document.querySelectorAll('.add-to-cart-trigger').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        triggerRefillPopup();
+      });
+    });
+
+    // ===== FORM SUBMISSIONS =====
+    function submitWelcomeForm(event) {
+      event.preventDefault();
+      
+      const email = document.getElementById('welcomeEmail').value;
+      const refillInterest = document.getElementById('welcomeRefill').checked;
+      
+      submitToEmailService({
+        email: email,
+        source: 'welcome_popup',
+        discount_code: 'WINTER15',
+        refill_interest: refillInterest,
+        timestamp: new Date().toISOString()
+      });
+      
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'generate_lead', {
+          lead_source: 'welcome_popup',
+          value: 15,
+          currency: 'CAD'
+        });
+      }
+      
+      closePopup('welcomePopup');
+      document.getElementById('successMessage').textContent = 
+        'Check your email for your 15% discount code. Welcome to Brave Skincare!';
+      openPopup('successPopup');
+    }
+
+    function submitExitForm(event) {
+      event.preventDefault();
+      
+      const email = document.getElementById('exitEmail').value;
+      
+      submitToEmailService({
+        email: email,
+        source: 'exit_intent_popup',
+        discount_code: 'WINTER20',
+        timestamp: new Date().toISOString()
+      });
+      
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'generate_lead', {
+          lead_source: 'exit_intent',
+          value: 20,
+          currency: 'CAD'
+        });
+      }
+      
+      closePopup('exitPopup');
+      document.getElementById('successMessage').textContent = 
+        'Your 20% off code is on its way! Check your inbox in the next few minutes.';
+      openPopup('successPopup');
+    }
+
+    function submitRefillForm(event) {
+      event.preventDefault();
+      
+      const email = document.getElementById('refillEmail').value;
+      const frequency = document.getElementById('refillFrequency').value;
+      
+      submitToEmailService({
+        email: email,
+        source: 'refill_enrollment_popup',
+        refill_frequency: frequency,
+        refill_enrolled: true,
+        discount_code: 'REFILL15',
+        timestamp: new Date().toISOString()
+      });
+      
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'refill_enrollment', {
+          enrollment_source: 'post_cart_popup',
+          frequency: frequency + '_weeks',
+          value: 127,
+          currency: 'CAD'
+        });
+      }
+      
+      closePopup('refillPopup');
+      document.getElementById('successMessage').textContent = 
+        `Perfect! You're enrolled in the ${frequency}-week refill program. We'll send a reminder 3 days before each delivery.`;
+      openPopup('successPopup');
+    }
+
+    function submitFooterEmail(event) {
+      event.preventDefault();
+      
+      const email = document.getElementById('footerEmail').value;
+      
+      submitToEmailService({
+        email: email,
+        source: 'footer_newsletter',
+        timestamp: new Date().toISOString()
+      });
+      
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'newsletter_signup', {
+          signup_location: 'footer'
+        });
+      }
+      
+      const form = event.target;
+      form.innerHTML = '<p style="color: #28a745; font-size: 16px; font-weight: 600;">✓ You\'re subscribed! Check your email.</p>';
+    }
+
+    // ===== EMAIL SERVICE INTEGRATION =====
+    function submitToEmailService(data) {
+      console.log('Submitting to email service:', data);
+      
+      // REPLACE WITH YOUR EMAIL SERVICE PROVIDER INTEGRATION
+      // Examples: Klaviyo, Mailchimp, ConvertKit, etc.
+      
+      // Klaviyo example:
+      /*
+      fetch('https://a.klaviyo.com/api/identify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          token: 'YOUR_PUBLIC_API_KEY',
+          properties: {
+            email: data.email,
+            $source: data.source,
+            discount_code: data.discount_code,
+            refill_interest: data.refill_interest,
+            refill_frequency: data.refill_frequency
+          }
+        })
+      });
+      */
+    }
     
-    // Tracking
+    // ===== TRACKING =====
     function track(cat, act, lbl) {
       console.log('Track:', cat, act, lbl);
       if (typeof gtag !== 'undefined') gtag('event', act, {'event_category': cat, 'event_label': lbl});
@@ -1226,7 +2125,7 @@
       if (t) track('CTA', 'click', t.getAttribute('data-track'));
     });
     
-    // Intersection Observer
+    // ===== INTERSECTION OBSERVER =====
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1240,7 +2139,7 @@
       observer.observe(el);
     });
     
-    // Smooth scroll
+    // ===== SMOOTH SCROLL =====
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const href = a.getAttribute('href');
@@ -1254,7 +2153,7 @@
       });
     });
     
-    // Checkout
+    // ===== CHECKOUT =====
     document.querySelectorAll('a[href="#checkout"]').forEach(btn => {
       btn.addEventListener('click', e => {
         e.preventDefault();
